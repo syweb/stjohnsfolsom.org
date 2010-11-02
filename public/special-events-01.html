@@ -1,0 +1,203 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+
+	<title>St. John The Baptist Catholic Church</title>
+	<link href="css/style.css" rel="stylesheet" type="text/css" />
+    
+    <!-- Image slider Start  -->
+	<script type="text/javascript" src="js/jquery-1.2.6.min.js"></script>
+     <script type="text/javascript" src="js/date.js"></script>
+
+	<script type="text/javascript">
+
+	function slideSwitch() {
+	    var $active = $('#slideshow IMG.active');
+
+	    if ( $active.length == 0 ) $active = $('#slideshow IMG:last');
+
+	    // use this to pull the images in the order they appear in the markup
+	    var $next =  $active.next().length ? $active.next()
+	        : $('#slideshow IMG:first');
+
+	    // uncomment the 3 lines below to pull the images in random order
+
+	    // var $sibs  = $active.siblings();
+	    // var rndNum = Math.floor(Math.random() * $sibs.length );
+	    // var $next  = $( $sibs[ rndNum ] );
+
+
+	    $active.addClass('last-active');
+
+	    $next.css({opacity: 0.0})
+	        .addClass('active')
+	        .animate({opacity: 1.0}, 1000, function() {
+	            $active.removeClass('active last-active');
+	        });
+	}
+
+	$(function() {
+	    setInterval( "slideSwitch()", 5000 );
+	});
+
+	</script>
+
+	<!-- Image slider End  -->
+     <!-- Upcoming event js start -->
+    <script type="text/javascript">
+		
+      jQuery(document).ready(function(){
+		var dates = [],
+			today = Date.today(),
+			id = 0;
+		jQuery('#events li').each(function(index){
+			var getLiDate = jQuery(this).attr("date");
+			var liDate = Date.parse(getLiDate);
+			if(liDate >= today && id < 3)
+			{
+				jQuery(this).show();
+				id++;
+			}
+			else{
+				jQuery(this).hide();
+			}
+		});
+		
+      });
+	</script>    
+    <!-- Upcoming event js End -->
+
+	
+</head>
+
+<body>
+	
+	<!--wraper start -->
+	<div class="wraper">
+		<!-- header start-->
+		<div class="header-full">
+			<div class="container" style="position:relative;">
+				<div class="logo"><a href="index.html"><img src="images/logo.gif" alt=""  /></a></div>
+				<div class="name-title">
+					<div class="name-title-img"><a href="index.html"><img src="images/title-st-john.gif" alt="" /></a></div>
+					<div class="name-title-text">307 Montrose Drive, Folsom, CA  95630, <span>Phone: (916) 985-2065, e-mail: <a href="mailto:office@stjohnsfolsom.org">office@stjohnsfolsom.org</a></span></div>
+					<div class="name-title-where">Where All Are Welcome</div>
+					
+				</div>
+				
+			</div>
+		</div>
+		<!-- header end -->
+		<!-- top-menu start -->
+		<div class="top-menu">
+			<div class="container">
+				<ul class="level-1">
+					<li class="link1"><a href="index.html" >Home </a></li>
+					<li class="link2"><a href="newcomers.html" >Newcomers</a></li>
+					<li class="link3"><a href="sacraments.html" >Sacraments</a></li>
+					<li class="link5"><a href="ministries.html" >Ministries</a></li>
+					<li class="link4"><a href="special-events.html" class="active">Special Events</a></li>
+					<li class="link6"><a href="resources.html" >Resources</a></li>
+					<li class="link7"><a href="parishioners.html" >Parishioners' Access</a></li>					
+				</ul>
+			</div>
+			
+		</div>
+		<!-- top-menu end -->
+		
+		
+		
+		<!-- contant start -->
+		<div class="contant">
+			<div class="container">
+				<div class="sptr20"></div>
+				<h2>Special Events 01</h2>
+				<!-- col720 start -->
+				<div class="col720 broder1">
+					<div class="col700">
+						<div class="img-box-690-226">
+                        	<div id="slideshow"> 
+                        		<img alt="" src="images/faith-01.jpg" class="active"/>
+                                <img alt="" src="images/parishioners.jpg" />
+                                <img alt="" src="images/sacraments.jpg" />
+                                <img alt="" src="images/ministries.jpg" />
+                                <img alt="" src="images/resources.jpg" />
+                            </div>
+                        </div>
+						<h5>Soccer Challenge</h5>
+                        <div class="sptr20"></div>
+                      <h5>Sponsor</h5>
+                      <p>Knights of Columbus</p>
+                      <h5>When</h5>
+                      <p>Sunday, September 12, 2010 at 10 AM, Registration begins at 10 AM</p>
+                      <h5>Where</h5>
+                      <p>Parish Soccer Field</p>
+                        <h5>What</h5>
+                        <p>All boys and girls ages 10-14 are invited to participate in the local (council level) competition. Registration begins at 10 a.m. at the "soccer field" which is behind the church and across from the Parish Center.</p>
+                        <p>All competitors must register. Pre-registration is recommended but not required. The registration/entry form can be found on a table in the vestibule of the church. The entry form, copy of birth certificate and parent's signature must accompany participants through all levels of competition. Winners will progress to the district, regional, and state competitions. International champions are chosen on the basis of state-level results.</p>
+                      <h5>Contact Information</h5>
+                        <p>For additional information, please contact: SK Percy Park at <a href="mailto:dbk576@aol.com">dbk576@aol.com</a> or at (916) 983-3368.</p>
+                        
+						
+				  </div>
+				</div>
+				<!-- col720 end -->
+				<!-- col200 start -->
+				<div class="col200 ">
+					<div class="quicklink">
+						<h4>Upcoming Special Events</h4>
+						<ul id="events">
+							<li date="10/11/2010"><a href="special-events.html" class="active">Soccer Challenge </a></li>
+							<li date="10/12/2010"><a href="special-events.html">Knight's Oktoberfest</a></li>
+							<li date="10/15/2010"><a href="special-events.html">Pacific Islander Aloha Festival</a></li>
+							<li date="10/17/2010"><a href="special-events.html">Fun Run</a></li>
+                            <li date="10/18/2010"><a href="special-events.html">Crab Feed &amp; Auction</a></li>
+                            <li date="10/19/2010"><a href="special-events.html">School Musical/Play</a></li>
+                            <li date="10/20/2010"><a href="special-events.html">Knights Free Throw Championship</a></li>
+                            <li date="10/21/2010"><a href="special-events.html">Breakfast w/St. Nick</a></li>
+                            <li date="10/22/2010"><a href="special-events.html">Breakfast w/St. Patrick</a></li>
+                            <li date="10/23/2010"><a href="special-events.html">Women's Christmas Brunch</a></li>
+                            <li date="10/24/2010"><a href="special-events.html">Healing Mass?</a></li>
+                            <li date="10/25/2010"><a href="special-events.html">WINGS Events</a></li>
+                            <li date="10/26/2010"><a href="special-events.html">Easter Egg Hunt</a></li>
+                            <li date="10/27/2010"><a href="special-events.html">Halloween Trunk</a></li>
+                            <li date="10/28/2010"><a href="special-events.html">Other Local Events</a></li>
+                         </ul>
+					</div>
+					
+				</div>
+				<!-- col200 end -->
+				<div class="sptr1"></div>
+			</div>
+			
+		</div>
+		
+		<!-- contant end -->
+		
+		
+		<!-- footer start -->
+		<div class="footer italic-georgia">
+			<div class="footer-l">
+			<div class="footer-r">
+				<div class="container">
+				<dl>
+					<dd class="column-l">Copyright &copy; 2010 St. John the Baptist Catholic Church. All Rights Reserved.</dd>
+					<dd class="column-r"><span>307 Montrose Drive, Folsom, CA  95630</span><br />Phone: (916) 985-2065, e-mail: <a href="mailto:office@stjohnsfolsom.org">office@stjohnsfolsom.org</a></dd>
+					<dd class="sptr1"></dd>
+				</dl>
+				</div>
+			</div>	
+			</div>
+		</div>
+		<!-- footer end -->
+		
+		
+	</div>
+	<!--wraper end -->
+
+
+</body>
+</html>

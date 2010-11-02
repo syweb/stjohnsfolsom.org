@@ -1,0 +1,331 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+
+	<title>St. John The Baptist Catholic Church</title>
+	<link href="css/style.css" rel="stylesheet" type="text/css" />
+    
+    <!-- Image slider Start  -->
+	<script type="text/javascript" src="js/jquery-1.2.6.min.js"></script>
+    <script type="text/javascript" src="js/date.js"></script>
+
+	<script type="text/javascript">
+
+	function slideSwitch() {
+	    var $active = $('#slideshow IMG.active');
+
+	    if ( $active.length == 0 ) $active = $('#slideshow IMG:last');
+
+	    // use this to pull the images in the order they appear in the markup
+	    var $next =  $active.next().length ? $active.next()
+	        : $('#slideshow IMG:first');
+
+	    // uncomment the 3 lines below to pull the images in random order
+
+	    // var $sibs  = $active.siblings();
+	    // var rndNum = Math.floor(Math.random() * $sibs.length );
+	    // var $next  = $( $sibs[ rndNum ] );
+
+
+	    $active.addClass('last-active');
+
+	    $next.css({opacity: 0.0})
+	        .addClass('active')
+	        .animate({opacity: 1.0}, 1000, function() {
+	            $active.removeClass('active last-active');
+	        });
+	}
+
+	$(function() {
+	    setInterval( "slideSwitch()", 5000 );
+	});
+
+	</script>
+
+	<!-- Image slider End  -->
+    <!-- Upcoming event js start -->
+    <script type="text/javascript">
+		
+      jQuery(document).ready(function(){
+		var dates = [],
+			today = Date.today(),
+			id = 0;
+		jQuery('#events li').each(function(index){
+			var getLiDate = jQuery(this).attr("date");
+			var liDate = Date.parse(getLiDate);
+			if(liDate >= today && id < 3)
+			{
+				jQuery(this).show();
+				id++;
+			}
+			else{
+				jQuery(this).hide();
+			}
+		});
+		
+      });
+	</script>    
+    <!-- Upcoming event js End -->
+
+	
+</head>
+
+<body>
+	
+	<!--wraper start -->
+	<div class="wraper">
+		<!-- header start-->
+		<div class="header-full">
+			<div class="container" style="position:relative;">
+				<div class="logo"><a href="index.html"><img src="images/logo.gif" alt=""  /></a></div>
+				<div class="name-title">
+					<div class="name-title-img"><a href="index.html"><img src="images/title-st-john.gif" alt="" /></a></div>
+					<div class="name-title-text">307 Montrose Drive, Folsom, CA  95630, <span>Phone: (916) 985-2065, e-mail: <a href="mailto:office@stjohnsfolsom.org">office@stjohnsfolsom.org</a></span></div>
+					<div class="name-title-where">Where All Are Welcome</div>
+					
+				</div>
+				
+			</div>
+		</div>
+		<!-- header end -->
+		<!-- top-menu start -->
+		<div class="top-menu">
+			<div class="container">
+				<ul class="level-1">
+					<li class="link1"><a href="index.html" >Home </a></li>
+					<li class="link2"><a href="newcomers.html" >Newcomers</a></li>
+					<li class="link3"><a href="sacraments.html" >Sacraments</a></li>
+					<li class="link5"><a href="ministries.html" >Ministries</a></li>
+					<li class="link4"><a href="special-events.html" class="active">Special Events</a></li>
+					<li class="link6"><a href="resources.html" >Resources</a></li>
+					<li class="link7"><a href="parishioners.html" >Parishioners' Access</a></li>					
+				</ul>
+			</div>
+			
+		</div>
+		<!-- top-menu end -->
+		
+		
+		
+		<!-- contant start -->
+		<div class="contant">
+			<div class="container">
+				<div class="sptr20"></div>
+				<h2>Special Events</h2>
+				<!-- col720 start -->
+				<div class="col720 broder1">
+					<div class="col700">
+						<div class="img-box-690-226">
+                        	<div id="slideshow"> 
+                        		<img alt="" src="images/faith-01.jpg" class="active"/>
+                                <img alt="" src="images/parishioners.jpg" />
+                                <img alt="" src="images/sacraments.jpg" />
+                                <img alt="" src="images/ministries.jpg" />
+                                <img alt="" src="images/resources.jpg" />
+                            </div>
+                        </div>
+						<h5>Special Events List</h5>
+                        <div class="sptr20"></div>
+                      	<div class="left-event-list">	
+							<ul class="events-list" >
+								<li date="11/12/2010">
+									<div class="date">Sep 12</div>
+									<a href="special-events-01.html" > Soccer Challenge  </a>
+									<div class="sptr10"></div>
+								</li>
+								<li date="12/12/2010">
+									<div class="date">Dec 12</div>
+									<a href="special-events-01.html">Knight's Oktoberfest</a>
+									<div class="sptr10"></div>
+								</li>
+								<li date="01/15/2011">
+									<div class="date">Jan 15</div>
+									<a href="special-events-01.html">Pacific Islander Aloha Festival</a>
+									<div class="sptr10"></div>
+								</li>
+								<li date="01/17/2011">
+									<div class="date">Jan 17</div>
+									<a href="special-events-01.html">Fun Run</a>
+									<div class="sptr10"></div>
+								</li>
+	                            <li date="01/18/2011">
+									<div class="date">Jan 18</div>
+									<a href="special-events-01.html">Crab Feed &amp; Auction</a>
+									<div class="sptr10"></div>
+								</li>
+	                            <li date="02/19/2011">
+									<div class="date">Feb 19</div>
+									<a href="special-events-01.html">School Musical/Play</a>
+									<div class="sptr10"></div>
+								</li>
+	                            <li date="02/20/2011">
+									<div class="date">Feb 20</div>
+									<a href="special-events-01.html">Knights Free Throw Championship</a>
+									<div class="sptr10"></div>
+								</li>
+	                            <li date="02/21/2011">
+									<div class="date">Feb 21</div>
+									<a href="special-events-01.html">Breakfast w/St. Nick</a>
+									<div class="sptr10"></div>
+								</li>
+	                            <li date="02/22/2011">
+									<div class="date">Feb 22</div>	
+									<a href="special-events-01.html">Breakfast w/St. Patrick</a>
+									<div class="sptr10"></div>
+								</li>
+	                            <li date="03/23/2011">
+									<div class="date">Mar 23</div>	
+									<a href="special-events-01.html">Women's Christmas Brunch</a>
+									<div class="sptr10"></div>
+								</li>
+	                            <li date="03/24/2011">
+									<div class="date">Mar 24</div>
+									<a href="special-events-01.html">Healing Mass?</a>
+									<div class="sptr10"></div>
+								</li>
+	                            <li date="03/25/2011">
+									<div class="date">Mar 25</div>
+									<a href="special-events-01.html">WINGS Events</a>
+									<div class="sptr10"></div>
+								</li>
+	                            <li date="03/26/2011">
+									<div class="date">Mar 26</div>
+									<a href="special-events-01.html">Easter Egg Hunt</a>
+									<div class="sptr10"></div>
+								</li>
+	                            <li date="03/27/2011">
+									<div class="date">Mar 27</div>	
+									<a href="special-events-01.html">Halloween Trunk</a>
+									<div class="sptr10"></div>
+								</li>
+	                            <li date="03/28/2011">
+									<div class="date">Mar 28</div>
+									<a href="special-events-01.html">Other Local Events</a>
+									<div class="sptr10"></div>
+								</li>
+	                         </ul>
+						</div>
+                        
+						
+				  </div>
+				</div>
+				<!-- col720 end -->
+				<!-- col200 start -->
+				<div class="col200 ">
+					<div class="quicklink">
+						<h4>Upcoming Special Events</h4>
+						<ul id="events">
+							<li date="11/12/2010">
+								<div class="date">Sep 12</div>
+								<a href="special-events-01.html" > Soccer Challenge  </a>
+								<div class="sptr1"></div>
+							</li>
+							<li date="12/12/2010">
+								<div class="date">Dec 12</div>
+								<a href="special-events-01.html">Knight's Oktoberfest</a>
+								<div class="sptr1"></div>
+							</li>
+							<li date="01/15/2011">
+								<div class="date">Jan 15</div>
+								<a href="special-events-01.html">Pacific Islander Aloha Festival</a>
+								<div class="sptr1"></div>
+							</li>
+							<li date="01/17/2011">
+								<div class="date">Jan 17</div>
+								<a href="special-events-01.html">Fun Run</a>
+								<div class="sptr1"></div>
+							</li>
+                            <li date="01/18/2011">
+								<div class="date">Jan 18</div>
+								<a href="special-events-01.html">Crab Feed &amp; Auction</a>
+								<div class="sptr1"></div>
+							</li>
+                            <li date="02/19/2011">
+								<div class="date">Feb 19</div>
+								<a href="special-events-01.html">School Musical/Play</a>
+								<div class="sptr1"></div>
+							</li>
+                            <li date="02/20/2011">
+								<div class="date">Feb 20</div>
+								<a href="special-events-01.html">Knights Free Throw Championship</a>
+								<div class="sptr1"></div>
+							</li>
+                            <li date="02/21/2011">
+								<div class="date">Feb 21</div>
+								<a href="special-events-01.html">Breakfast w/St. Nick</a>
+								<div class="sptr1"></div>
+							</li>
+                            <li date="02/22/2011">
+								<div class="date">Feb 22</div>	
+								<a href="special-events-01.html">Breakfast w/St. Patrick</a>
+								<div class="sptr1"></div>
+							</li>
+                            <li date="03/23/2011">
+								<div class="date">Mar 23</div>	
+								<a href="special-events-01.html">Women's Christmas Brunch</a>
+								<div class="sptr1"></div>
+							</li>
+                            <li date="03/24/2011">
+								<div class="date">Mar 24</div>
+								<a href="special-events-01.html">Healing Mass?</a>
+								<div class="sptr1"></div>
+							</li>
+                            <li date="03/25/2011">
+								<div class="date">Mar 25</div>
+								<a href="special-events-01.html">WINGS Events</a>
+								<div class="sptr1"></div>
+							</li>
+                            <li date="03/26/2011">
+								<div class="date">Mar 26</div>
+								<a href="special-events-01.html">Easter Egg Hunt</a>
+								<div class="sptr1"></div>
+							</li>
+                            <li date="03/27/2011">
+								<div class="date">Mar 27</div>	
+								<a href="special-events-01.html">Halloween Trunk</a>
+								<div class="sptr1"></div>
+							</li>
+                            <li date="03/28/2011">
+								<div class="date">Mar 28</div>
+								<a href="special-events-01.html">Other Local Events</a>
+								<div class="sptr1"></div>
+							</li>
+                         </ul>
+					</div>
+					
+				</div>
+				<!-- col200 end -->
+				<div class="sptr1"></div>
+			</div>
+			
+		</div>
+		
+		<!-- contant end -->
+		
+		
+		<!-- footer start -->
+		<div class="footer italic-georgia">
+			<div class="footer-l">
+			<div class="footer-r">
+				<div class="container">
+				<dl>
+					<dd class="column-l">Copyright &copy; 2010 St. John the Baptist Catholic Church. All Rights Reserved.</dd>
+					<dd class="column-r"><span>307 Montrose Drive, Folsom, CA  95630</span><br />Phone: (916) 985-2065, e-mail: <a href="mailto:office@stjohnsfolsom.org">office@stjohnsfolsom.org</a></dd>
+					<dd class="sptr1"></dd>
+				</dl>
+				</div>
+			</div>	
+			</div>
+		</div>
+		<!-- footer end -->
+		
+		
+	</div>
+	<!--wraper end -->
+
+
+</body>
+</html>
