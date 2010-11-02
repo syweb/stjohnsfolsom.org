@@ -5,7 +5,7 @@ $(document).ready(function(){
 
 function get_announcements(){
     $.ajax({
-      url: "http://test-sjnds.local-sy.com:4000/get_announcements",
+      url: "https://stjohnfolsom.schoolyardapp.com/get_announcements",
       cache: false,
       type: 'GET',
       //jsonpCallback: "insert_announcements", 
@@ -29,7 +29,7 @@ function get_announcements(){
 
 function get_events(){
     $.ajax({
-      url: "http://test-sjnds.local-sy.com:4000/get_events",
+      url: "https://stjohnfolsom.schoolyardapp.com/get_events",
       cache: false,
       type: 'GET',
       //jsonpCallback: "insert_announcements", 
