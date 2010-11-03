@@ -28,7 +28,7 @@ function get_announcements(){
 
 function get_events(){
     $.ajax({
-      url: "https://stjohnfolsom.schoolyardapp.com/get_events",
+      url: "https://stjohnfolsom.schoolyardapp.com/get_events.json",
       //url: "http://test-sjnds.local-sy.com:4000/get_events.json",
       cache: false,
       type: 'get',
