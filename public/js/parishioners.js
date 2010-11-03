@@ -5,11 +5,10 @@ $(document).ready(function(){
 
 function get_announcements(){
     $.ajax({
-      url: "https://stjohnfolsom.schoolyardapp.com/get_announcements",
+      url: "https://stjohnfolsom.schoolyardapp.com/get_announcements.json",
       cache: false,
-      type: 'GET',
-      //jsonpCallback: "insert_announcements", 
-      dataType: 'json',
+      type: 'get',
+      dataType: 'jsonp',
       success: function(response){
          $.each(response, function(i, item){ 
                  var dt = response[i].updated_at.replace(/T|Z/g, " ").replace(/-/g, "/");
@@ -30,10 +29,10 @@ function get_announcements(){
 function get_events(){
     $.ajax({
       url: "https://stjohnfolsom.schoolyardapp.com/get_events",
+      //url: "http://test-sjnds.local-sy.com:4000/get_events.json",
       cache: false,
-      type: 'GET',
-      //jsonpCallback: "insert_announcements", 
-      dataType: 'json',
+      type: 'get',
+      dataType: 'jsonp',
       success: function(response){
          $.each(response, function(i, item){ 
                  var dt = response[i].updated_at.replace(/T|Z/g, " ").replace(/-/g, "/");
