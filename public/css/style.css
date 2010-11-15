@@ -175,7 +175,8 @@ p{padding-bottom:15px; line-height:24px; padding-bottom:15px;}
 .banner-menu{position:absolute; width:170px; height:250;  top:3px; z-index:100;}
 .banner-menu-over-img{position:absolute; width:30px; height:150px; top:-1px; left:0;}
 
-.banner-menu a{display:block; padding:16px 10px 0 40px; height:34px;  background:url(../images/bg-banner-menu.png) no-repeat; color:#fff; text-decoration:none;}
+.banner-menu a {display:block; padding:16px 10px 0 10px; height:34px;  background:url(../images/bg-banner-menu.png) no-repeat; color:#fff; text-decoration:none;}
+.banner-menu div {display:block; padding:16px 10px 0 8px; height:34px;  background:url(../images/bg-banner-menu.png) no-repeat; color:#fff; text-decoration:none;}
 .banner-menu a:link{color:#fff; text-decoration:none;}
 .banner-menu a:visited{color:#fff; text-decoration:none;}
 .banner-menu a:hover{color:#000; text-decoration:none; background:url(../images/bg-banner-menu-o.png) no-repeat;}
@@ -299,3 +300,4 @@ p{padding-bottom:15px; line-height:24px; padding-bottom:15px;}
 .li-data li a:active{color:#3B3B3B; text-decoration:none;}
 
 
+.indented{padding:10px 20px;}
