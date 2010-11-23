@@ -301,3 +301,18 @@ p{padding-bottom:15px; line-height:24px; padding-bottom:15px;}
 
 
 .indented{padding:10px 20px;}
+
+/* event-box 22-Nov-2010 */
+
+.event-box{padding:1px;  margin-bottom:15px; font-size:14px; border:1px solid #ccc;   background:#fff; }
+.event-box div{margin-bottom:1px;}
+.event-box .box-title{padding:8px;  color:#fff; background:#116362;}
+.event-box .event-title{padding:4px 8px; background:#5ca1a0; color:#16403f;}
+.event-box .event-title span{font-size:12px; color:#fff; }
+.event-box .event-dtail{ padding:4px 8px; color:#666;}
+.event-box .event-dtail a{text-decoration:none; color:#16403f; }
+.event-box .event-dtail a:link{text-decoration:none; color:#16403f; }
+.event-box .event-dtail a:visited{text-decoration:none; color:#16403f; }
+.event-box .event-dtail a:hover{text-decoration:underline; color:#16403f; }
+.event-box .event-dtail a:active{ text-decoration:none; color:#16403f;}
+
