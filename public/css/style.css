@@ -60,12 +60,15 @@ p{padding-bottom:15px; line-height:24px; padding-bottom:15px;}
 .col120{width:120px; float:left;}
 
 .col200{width:200px; float:right;}
+.col200-1{width:200px; float:left;}
 .col260{width:260px; float:right;}
+
 
 .col340{width:340px; float:left;}
 .col380{width:380px; float:left;}
 .col300-1{width:300px; float:left;}
 .col300{width:300px; float:right; padding-right:20px;}
+.col450{width:440px; float:left;}
 .col500{width:500px; float:left;}
 .col620{width:620px; float:left;}
 .col660{width:660px; float:left;}
@@ -316,3 +319,7 @@ p{padding-bottom:15px; line-height:24px; padding-bottom:15px;}
 .event-box .event-dtail a:hover{text-decoration:underline; color:#16403f; }
 .event-box .event-dtail a:active{ text-decoration:none; color:#16403f;}
 
+
+/* event-box end */
+
+.map-box{border:5px solid #ccc;}
