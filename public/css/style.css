@@ -64,7 +64,9 @@ p{padding-bottom:15px; line-height:24px; padding-bottom:15px;}
 .col260{width:260px; float:right;}
 
 
+
 .col340{width:340px; float:left;}
+.col350{width:350px; float:left;}
 .col380{width:380px; float:left;}
 .col300-1{width:300px; float:left;}
 .col300{width:300px; float:right; padding-right:20px;}
@@ -75,7 +77,7 @@ p{padding-bottom:15px; line-height:24px; padding-bottom:15px;}
 .col700{width:700px; float:left;}
 .col720{width:720px; float:left;}
 
-
+.colinnerpadding{padding:10px;}
 .broder1{border-right:1px solid #b8ba9c;  }
 
 /*-- Image Box --*/
