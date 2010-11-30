@@ -71,11 +71,17 @@ p{padding-bottom:15px; line-height:24px; padding-bottom:15px;}
 .col300-1{width:300px; float:left;}
 .col300{width:300px; float:right; padding-right:20px;}
 .col450{width:440px; float:left;}
+.col420{width:420px; float:left;}
 .col500{width:500px; float:left;}
 .col620{width:620px; float:left;}
+.col640{width:640px; float:left;}
 .col660{width:660px; float:left;}
 .col700{width:700px; float:left;}
 .col720{width:720px; float:left;}
+
+.incol1{width:660px; float:left;}
+.incol1-inner{width:640px; float:left;}
+.incol2{width:260px; float:right;}
 
 .colinnerpadding{padding:10px;}
 .broder1{border-right:1px solid #b8ba9c;  }
@@ -84,8 +90,8 @@ p{padding-bottom:15px; line-height:24px; padding-bottom:15px;}
 .floting-img-box{float:left; margin:0 20px 10px 0; }
 .img-box-380-286{background:url(../images/bg-imageframe-380-1.png) no-repeat; padding:8px 0 0 13px; height:278px; width:367px;   margin-bottom:15px;}
 
-.img-box-690-226{background:url(../images/bg-imageframe-690-1.png) no-repeat; padding:10px 0 0 13px; height:216px; width:677px; margin-bottom:15px;}
-.img-box-690-226 #slideshow{width:664px; height:200px;}
+.img-box-690-226{background:url(../images/bg-banner2.gif) 0 bottom no-repeat;  height:290px; width:640px; margin-bottom:15px;}
+.img-box-690-226 #slideshow{width:640px; height:290px;}
 
 .img-border{padding:1px; border:3px solid #ccc; float:left; margin:0 20px 6px 0px;}
 
@@ -128,63 +134,64 @@ p{padding-bottom:15px; line-height:24px; padding-bottom:15px;}
 .name-title-where{color:#fff; font-weight:bold; color:#fff; font-size:18px;  padding-bottom:5px; padding-top:5px; padding-right:48px; text-align:right;}
 
 /*-- top-menu --*/
-.top-menu{height:50px; background: url(../images/bg-top-menu.gif) repeat-x;}
+.top-menu{height:50px; background:#333 }/* url(../images/bg-top-menu.gif) repeat-x; */
 
-.level-1 li{text-align:center; font-size:17px; color:#b9b5b5; line-height:50px; font-family:georgia,sans-serif, Arial, Helvetica;  } 
+.level-1 li{text-align:center; font-size:15px; color:#fff; line-height:50px; font-family:georgia,sans-serif, Arial, Helvetica;  } 
 .level-1 li a{color:#b9b5b5; text-decoration:none;}
 .level-1 li a:link{color:#b9b5b5; text-decoration:none;}
-.level-1 li a:visited{color:#b9b5b5; text-decoration:none;}
+.level-1 li a:visited{color:#fff; text-decoration:none;}
 .level-1 li a:hover{color:#fff; text-decoration:none;}
-.level-1 li a:active{color:#b9b5b5; text-decoration:none;}
+.level-1 li a:active{color:#ebffff; text-decoration:none;}
 
 
-.level-1 .link1{float:left; width:86px;}
-.level-1 .link2{float:left; width:120px;}
-.level-1 .link3{float:left; width:130px; }
-.level-1 .link4{float:left; width:150px;}
-.level-1 .link5{float:left; width:106px;}
-.level-1 .link6{float:left; width:100px;}
+.level-1 .link1{float:left; width:90px;}
+.level-1 .link2{float:left; width:122px;}
+.level-1 .link3{float:left; width:141px; }
+.level-1 .link4{float:left; width:141px;}
+.level-1 .link5{float:left; width:115px;}
+.level-1 .link6{float:left; width:115px;}
 .level-1 .link7{float:left; width:180px;}
 
-.level-1 .link1 a{display:block; background:url(../images/bg-menu-sptr.gif) right 4px no-repeat; height:50px; }
-.level-1 .link2 a{display:block; background:url(../images/bg-menu-sptr.gif) right 4px no-repeat; height:50px;}
-.level-1 .link3 a{display:block; background:url(../images/bg-menu-sptr.gif) right 4px no-repeat; height:50px;}
-.level-1 .link4 a{display:block; background:url(../images/bg-menu-sptr.gif) right 4px no-repeat; height:50px;}
-.level-1 .link5 a{display:block; background:url(../images/bg-menu-sptr.gif) right 4px no-repeat; height:50px;}
-.level-1 .link6 a{display:block; background:url(../images/bg-menu-sptr.gif) right 4px no-repeat; height:50px;}
-.level-1 .link7 a{display:block; height:50px;}
+.level-1 .link1 a{display:block; margin:0px 5px 0px 5px; }
+.level-1 .link2 a{display:block; margin:0px 5px 0px 5px; }
+.level-1 .link3 a{display:block; margin:0px 5px 0px 5px; }
+.level-1 .link4 a{display:block; margin:0px 5px 0px 5px; }
+.level-1 .link5 a{display:block; margin:0px 5px 0px 5px; }
+.level-1 .link6 a{display:block; margin:0px 5px 0px 5px; }
+.level-1 .link7 a{display:block; margin:0px 5px 0px 5px; }
 
-.level-1 .link1 a:hover{background:url(../images/link1-o.gif) no-repeat;}
-.level-1 .link2 a:hover{background:url(../images/link120-o.gif) no-repeat;}
-.level-1 .link3 a:hover{background:url(../images/link130-o.gif) no-repeat;}
-.level-1 .link4 a:hover{background:url(../images/link150-o.gif) no-repeat;}
-.level-1 .link5 a:hover{background:url(../images/link106-o.gif) no-repeat;}
-.level-1 .link6 a:hover{background:url(../images/link100-o.gif) no-repeat;}
-.level-1 .link7 a:hover{background:url(../images/link180-o.gif) no-repeat;}
+.level-1 .link1 a:hover{background:url(../images/link80-o.gif) 0px 10px no-repeat;}
+.level-1 .link2 a:hover{background:url(../images/link112-o.gif) 0px 10px no-repeat;}
+.level-1 .link3 a:hover{background:url(../images/link131-o.gif) 0px 10px no-repeat;}
+.level-1 .link4 a:hover{background:url(../images/link131-o.gif) 0px 10px no-repeat;}
+.level-1 .link5 a:hover{background:url(../images/link105-o.gif) 0px 10px no-repeat;}
+.level-1 .link6 a:hover{background:url(../images/link105-o.gif) 0px 10px no-repeat;}
+.level-1 .link7 a:hover{background:url(../images/link170-o.gif) 0px 10px no-repeat;}
 
-.level-1 .link1 a.active{background:url(../images/link1-o.gif) no-repeat; color:#ffffff;}
-.level-1 .link2 a.active{background:url(../images/link120-o.gif) no-repeat; color:#ffffff;}
-.level-1 .link3 a.active{background:url(../images/link130-o.gif) no-repeat; color:#ffffff;}
-.level-1 .link4 a.active{background:url(../images/link150-o.gif) no-repeat; color:#ffffff;}
-.level-1 .link5 a.active{background:url(../images/link106-o.gif) no-repeat; color:#ffffff;}
-.level-1 .link6 a.active{background:url(../images/link100-o.gif) no-repeat; color:#ffffff;}
-.level-1 .link7 a.active{background:url(../images/link180-o.gif) no-repeat; color:#ffffff;}
+.level-1 .link1 a.active{background:url(../images/link80-o.gif) 0px 10px no-repeat; color:#ffffff;}
+.level-1 .link2 a.active{background:url(../images/link112-o.gif) 0px 10px no-repeat; color:#ffffff;}
+.level-1 .link3 a.active{background:url(../images/link131-o.gif) 0px 10px no-repeat; color:#ffffff;}
+.level-1 .link4 a.active{background:url(../images/link131-o.gif) 0px 10px no-repeat; color:#ffffff;}
+.level-1 .link5 a.active{background:url(../images/link105-o.gif) 0px 10px no-repeat; color:#ffffff;}
+.level-1 .link6 a.active{background:url(../images/link105-o.gif) 0px 10px no-repeat; color:#ffffff;}
+.level-1 .link7 a.active{background:url(../images/link170-o.gif) 0px 10px no-repeat; color:#ffffff;}
 
 
 
 /*-- banner --*/
 .banner{padding:5px 0 20px 0;}
 .banner img{display:block;}
-.bg-banner{background:url(../images/bg-banner.gif) no-repeat; padding:2px 0 0 13px; width:947px;  height:258px; position:relative;}
+.bg-banner{ padding:0px 0 0 0px; width:940px;  height:369px; background:url(../images/bg-banner.gif) 0 bottom no-repeat; position:relative;}
 
-.banner-menu{position:absolute; width:170px; height:250;  top:3px; z-index:100;}
+.banner-menu{position:absolute; width:940px; height:53px;  top:308px; z-index:100;}
 .banner-menu-over-img{position:absolute; width:30px; height:150px; top:-1px; left:0;}
 
-.banner-menu a {display:block; padding:16px 10px 0 10px; height:34px;  background:url(../images/bg-banner-menu.png) no-repeat; color:#fff; text-decoration:none;}
+.banner-menu a {display:block;  height:53px; width:235px;  background:url(../images/bg-banner-menu.png) -252px 0 no-repeat; color:#fff; text-decoration:none; float:left; font-size:17px; line-height:22px;}
+.banner-menu a span{padding:5px 0 0 55px; display:block;}
 .banner-menu div {display:block; padding:16px 10px 0 8px; height:34px;  background:url(../images/bg-banner-menu.png) no-repeat; color:#fff; text-decoration:none;}
 .banner-menu a:link{color:#fff; text-decoration:none;}
 .banner-menu a:visited{color:#fff; text-decoration:none;}
-.banner-menu a:hover{color:#000; text-decoration:none; background:url(../images/bg-banner-menu-o.png) no-repeat;}
+.banner-menu a:hover{color:#fff; text-decoration:none; background:url(../images/bg-banner-menu.png) 1px 0 no-repeat;}
 
 
 /*-- footer --*/
@@ -291,8 +298,8 @@ p{padding-bottom:15px; line-height:24px; padding-bottom:15px;}
 
 
 /*-- 29-Sep-2010  --*/
-.ewtn-col{float:left; width:248px; }
-.ihr-col{float:right; width:361px;  }
+.ewtn-col{float:left; width:210px; }
+.ihr-col{float:left; width:361px;  }
  
 #accordion{border:1px solid #ccc;}
 .li-title{background:#2B8887; padding:5px; color:#fff; border-bottom:1px solid #fff; cursor:pointer; }
