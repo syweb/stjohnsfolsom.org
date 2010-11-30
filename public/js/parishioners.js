@@ -110,11 +110,11 @@ function get_group_events(div_to_append, group_id) {
         $(div_to_append).find('.event-box').append('<div class="event-title">' + response[i].title + '<br/><span>' + date_string + '</span></div>');
         $(div_to_append).find('.event-box').append('<div class="event-dtail">' + response[i].description + '</div>');
 
-        if (response[i].has_downloads == true) {
+        //if (response[i].has_downloads == true) {
           //'<br/><a href="#">Download Attachment</a>'
-          download_link = PARISH_URL + '/download/' + response[i].id;
-          $(div_to_append).find('.event-box').find('.event-dtail').append('<br/><a href="' + download_link + '">Download Attachment</a>');
-        }
+          //download_link = PARISH_URL + '/download/' + response[i].id;
+          //$(div_to_append).find('.event-box').find('.event-dtail').append('<br/><a href="' + download_link + '">Download Attachment</a>');
+        //}
       });
       
       $(div_to_append).append('</div>');
