@@ -79,7 +79,7 @@ function get_group_announcements(div_to_append, group_id) {
         
         if (response[i].has_downloads == true) {
           //'<br/><a href="#">Download Attachment</a>'
-          download_link = PARISH_URL + '/download/' + response[i].id;
+          download_link = PARISH_URL + '/publik/download/' + response[i].id;
           $(div_to_append).find('.event-box').find('.event-dtail').append('<br/><a href="' + download_link + '">Download Attachment</a>');
         }
       });
