@@ -128,7 +128,7 @@ function get_group_events(div_to_append, group_id) {
 
 function get_event_date(start_date, start_time, end_date, end_time) {
   var d = new Date(start_date);
-  var t = new Date(start_time.replace(/T|Z/g, " ").replace(/-/g, "/"));
+  //var t = new Date(start_time.replace(/T|Z/g, " ").replace(/-/g, "/"));
   
   return d.toLocaleDateString(); // + ' ' + t.toLocaleTimeString();
 }
