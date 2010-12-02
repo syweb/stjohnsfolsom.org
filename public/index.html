@@ -10,47 +10,26 @@
 	
 	<!-- Image slider Start  -->
 	<script type="text/javascript" src="js/jquery-1.4.3.min.js"></script>
+	<script type="text/javascript" src="js/jquery-ui-1.8.4.custom.min.js"></script>
 	<script type="text/javascript" src="js/parishioners.js"></script>
 
 	<script type="text/javascript">
-
-	function slideSwitch() {
-	    var $active = $('#slideshow IMG.active');
-
-	    if ( $active.length == 0 ) $active = $('#slideshow IMG:last');
-
-	    // use this to pull the images in the order they appear in the markup
-	    var $next =  $active.next().length ? $active.next()
-	        : $('#slideshow IMG:first');
-
-	    // uncomment the 3 lines below to pull the images in random order
-
-	    // var $sibs  = $active.siblings();
-	    // var rndNum = Math.floor(Math.random() * $sibs.length );
-	    // var $next  = $( $sibs[ rndNum ] );
-
-
-	    $active.addClass('last-active');
-
-	    $next.css({opacity: 0.0})
-	        .addClass('active')
-	        .animate({opacity: 1.0}, 1000, function() {
-	            $active.removeClass('active last-active');
-	        });
-	}
-
-	$(function() {
-	    setInterval( "slideSwitch()", 6000 );
-	});
-
 
   $(document).ready(function() {
     get_group_announcements("#group_announcements", "1116");
     get_group_events("#group_events", "1116");
   });
 
-
 	</script>
+	
+	<!-- Banner Start -->
+	<script src="js/jquery.jcarousel.pack.js" type="text/javascript"></script>
+	<script src="js/jquery-func.js" type="text/javascript"></script>
+	<!-- Banner End -->
+	
+	
+	
+	
 
 	<!-- Image slider End  -->
 	
@@ -106,37 +85,137 @@
 		</div>
 		<!-- top-menu end -->
 		
-		<!-- banner start -->
-		<div class="banner">
+		
+		
+		<!-- Start  banner-->
+		<div class="banner" >
 			<div class="container bg-banner">
-				
-				
-				<div class="slideshow-outer">
-					<div id="slideshow">
-				    	<img src="images/banner.jpg" alt="" class="active" />
-					    <img src="images/banner1.jpg" alt="" />
-					    <img src="images/banner2.jpg" alt="" />
-					    <img src="images/banner3.jpg" alt="" />
-				    	<img src="images/banner4.jpg" alt="" />
-				    	<img src="images/banner5.jpg" alt="" />
-				    	<img src="images/banner6.jpg" alt="" />
-				    	<img src="images/banner7.jpg" alt="" />
-				    	<img src="images/banner8.jpg" alt="" />
-				    	<img src="images/banner9.jpg" alt="" />
+				<!-- Slider -->
+				<div id="slider">
+					<div class="shell">
+						<!-- Slides -->
+						<div class="slides">
+							<ul>
+								<!-- Slide -->
+							    <li>
+							    	<div class="slide-info">
+								    	<img src="images/banner.jpg" alt="" />
+							    	</div>
+
+							    </li>
+								<!-- End Slide -->
+
+							    <!-- Slide -->
+							    <li>
+							    	<div class="slide-info">
+								    	<img src="images/banner1.jpg" alt="" />
+							    	</div>
+
+							    </li>
+							    <!-- End Slide -->
+
+							    <!-- Slide -->
+							    <li>
+							    	<div class="slide-info">
+								    	<img src="images/banner2.jpg" alt="" />
+							    	</div>
+
+							    </li>
+								<!-- End Slide -->
+								<!-- Slide -->
+							    <li>
+							    	<div class="slide-info">
+								    	<img src="images/banner3.jpg" alt="" />
+							    	</div>
+
+							    </li>
+								<!-- End Slide -->
+								<!-- Slide -->
+							    <li>
+							    	<div class="slide-info">
+								    	<img src="images/banner4.jpg" alt="" />
+							    	</div>
+
+							    </li>
+								<!-- End Slide -->
+								<!-- Slide -->
+							    <li>
+							    	<div class="slide-info">
+								    	<img src="images/banner5.jpg" alt="" />
+							    	</div>
+
+							    </li>
+								<!-- End Slide -->
+								<!-- Slide -->
+							    <li>
+							    	<div class="slide-info">
+								    	<img src="images/banner6.jpg" alt="" />
+							    	</div>
+
+							    </li>
+								<!-- End Slide -->
+								<!-- Slide -->
+							    <li>
+							    	<div class="slide-info">
+								    	<img src="images/banner7.jpg" alt="" />
+							    	</div>
+
+							    </li>
+								<!-- End Slide -->
+								<!-- Slide -->
+							    <li>
+							    	<div class="slide-info">
+								    	<img src="images/banner8.jpg" alt="" />
+							    	</div>
+
+							    </li>
+								<!-- End Slide -->
+								<!-- Slide -->
+							    <li>
+							    	<div class="slide-info">
+								    	<img src="images/banner9.jpg" alt="" />
+							    	</div>
+
+							    </li>
+								<!-- End Slide -->
+
+
+						    </ul>
 						</div>
-					<div class="banner-menu">
-            
-						<a href="home-04.html"  ><span>Children<br/>Faith Formation</span></a>
-						<a href="home-05.html"  ><span>Adults<br/>Faith Formation</span></a>
-						
-						<a href="home-02.html"  ><span>St. John<br/>Notre Dame School</span></a>
-						<a href="ministries-25.html"  ><span>How do<br/>I become Catholic?</span></a>
-						
+						<!-- End Slides -->
 					</div>
-                </div>
+				</div>
+				<!-- End Slider -->
+				<!-- Slider Nav -->
+				<div id="slider-navigation">
+					
+					<div class="shell">
+						<ul>
+						    <li><a href="#" class="active">1</a></li>
+						    <li><a href="#">2</a></li>
+								<li><a href="#">3</a></li>
+								<li><a href="#">4</a></li>
+								<li><a href="#">5</a></li>
+								<li><a href="#">6</a></li>
+								<li><a href="#">7</a></li>
+								<li><a href="#">8</a></li>
+								<li><a href="#">9</a></li>
+						    <li class="last"><a href="#">10</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="banner-menu">
+          <a href="home-04.html"  ><span>Children<br/>Faith Formation</span></a>
+					<a href="home-05.html"  ><span>Adults<br/>Faith Formation</span></a>
+					
+					<a href="home-02.html"  ><span>St. John<br/>Notre Dame School</span></a>
+					<a href="ministries-25.html"  ><span>How do<br/>I become Catholic?</span></a>
+				</div>
+				<!-- End Slider Nav -->
+
 			</div>
 		</div>
-		<!-- banner end -->
+		<!-- end banner-->
 		
 		<!-- contant start -->
 		<div class="contant">
