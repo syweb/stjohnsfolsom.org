@@ -276,7 +276,7 @@ p{padding-bottom:15px; line-height:24px; padding-bottom:15px;}
 
 
 #events li .date{background: url(../images/bg-date-upcomeing.gif) top left no-repeat; font-family:georgia,sans-serif, Arial, Helvetica;  text-align:center; float:left; height:23px; line-height:23px; width:64px; padding-right:10px;}
-#events li a{float:left; width:100px;}
+#events li a{float:left; width:156px;}
 
 .left-event-list .events-list li .date{background: url(../images/bg-date-upcomeing.gif) top left no-repeat; font-family:georgia,sans-serif, Arial, Helvetica;  text-align:center; float:left; height:23px; line-height:23px; width:64px; padding-right:10px;}
 .left-event-list .events-list li a{float:left; width:600px;}
@@ -350,3 +350,37 @@ p{padding-bottom:15px; line-height:24px; padding-bottom:15px;}
 /* event-box end */
 
 .map-box{border:5px solid #ccc;}
+
+/*-- slider start --*/
+#slider {width:940px; height:359px;  }
+
+.slides { width:940px; height:359px; position:relative; overflow:hidden; color:#b6b6b6; }
+.slides .jcarousel-clip { width:940px; height:359px; position:relative; overflow:hidden; }
+.slides ul { width:940px; height:359px; position:relative; overflow:hidden; list-style-type: none;}
+.slides ul li{ float:left; display:inline; width:940px; height:359px; position:relative; overflow:hidden; }
+
+.slide-info { float:left; width:940px; }
+
+
+
+
+
+#slider-navigation { height:60px; width:940px;  position:absolute; top:0px; left:-4px; background:url(../images/slider-nav.gif) no-repeat; }
+#slider-navigation .welcome-text{width:600px; float:left; font-size:22px; color:#000; padding:8px 0 0 20px;}
+#slider-navigation ul{ list-style-type: none; position:relative; width:245px; float:right;  }
+#slider-navigation ul li{ float:left; display:inline; position:relative; padding:10px 2px 0 4px; }
+#slider-navigation ul li.last{ margin-right:0;}
+#slider-navigation ul li a{ float:left; width:16px; height:16px; display:block; background:#333; color:#fff; border:1px solid #999; text-align:center; position:relative; 
+	}
+	
+#slider-navigation ul li a strong { display:block; font-size:23px; line-height:23px; color:#fff;}
+#slider-navigation ul li a em{ position:absolute; top:43px; left:20px; }
+
+#slider-navigation ul li a.active,
+#slider-navigation ul li a:hover { background:url(../images/slide-active.gif) no-repeat 0 0 ;  color:#fff;  background:#116362;  }
+
+#slider-navigation ul li a.active strong,
+#slider-navigation ul li a:hover strong{ color:#000; }
+/*-- slider End --*/
+
+.special-event-detail{padding-bottom:20px;}
