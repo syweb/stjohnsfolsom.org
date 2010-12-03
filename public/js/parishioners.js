@@ -61,30 +61,41 @@ function get_events(div_to_append) {
 
 
 
-function get_group_announcements(div_to_append, group_id) {
+function get_group_announcements(div_to_append, group_id, number) {
+
+  if (typeof number == "undefined") {
+      number = 6;
+  }
+
   $.ajax({
     url: PARISH_URL + "/get_group_announcements.json/" + group_id,
     cache: false,
     type: 'get',
     dataType: 'jsonp',
     success: function(response) {
-      
+    
       $(div_to_append).append('<div class="event-box"><div class="box-title">Announcements</div></div>');
-        
+      
       $.each(response, function(i, item) {
         var dt = response[i].updated_at.replace(/T|Z/g, " ").replace(/-/g, "/");
 
         var event_link = 'event-link-' + response[i].id;
 
-        $(div_to_append).find('.event-box').append('<div class="event-title">' + response[i].title + '</div>');
-        $(div_to_append).find('.event-box').append('<div class="event-dtail">' + response[i].content + '<span id="' + event_link + '"></span></div>');
-        
-        if (response[i].has_downloads == true) {
-          //'<br/><a href="#">Download Attachment</a>'
-          download_link = PARISH_URL + '/publik/download/' + response[i].id;
-          $(div_to_append).find('#'+event_link).append('<br/><a href="' + download_link + '">Download Attachment</a>');
+        if (i < number) {
+
+          $(div_to_append).find('.event-box').append('<div class="event-title">' + response[i].title + '</div>');
+          $(div_to_append).find('.event-box').append('<div class="event-dtail">' + response[i].content + '<span id="' + event_link + '"></span></div>');
+      
+          if (response[i].has_downloads == true) {
+            //'<br/><a href="#">Download Attachment</a>'
+            download_link = PARISH_URL + '/publik/download/' + response[i].id;
+            $(div_to_append).find('#'+event_link).append('<br/><a href="' + download_link + '">Download Attachment</a>');
+          }
         }
+
       });
+
+
     }
   });
 
@@ -92,7 +103,12 @@ function get_group_announcements(div_to_append, group_id) {
 
 
 
-function get_group_events(div_to_append, group_id) {
+function get_group_events(div_to_append, group_id, number) {
+
+  if (typeof number == "undefined") {
+      number = 6;
+  }
+
   $.ajax({
     url: PARISH_URL + "/get_group_events.json/" + group_id,
     cache: false,
@@ -110,9 +126,10 @@ function get_group_events(div_to_append, group_id) {
         //$(div_to_append).find('.event-box').append('<div class="event-title">' + response[i].title + '<br/><span>' + date_string + '</span></div>');
         //$(div_to_append).find('.event-box').append('<div class="event-dtail">' + response[i].description + '</div>');
 
-        $(div_to_append).find('#events').append('<li><div class="date">' + date_string + '</div>' + response[i].title 
-        + '<div class="sptr1"></div></li>');
-
+        if (i < number) {
+          $(div_to_append).find('#events').append('<li><div class="date">' + date_string + '</div>' + response[i].title 
+          + '<div class="sptr1"></div></li>');
+        }
 
         //if (response[i].has_downloads == true) {
           //'<br/><a href="#">Download Attachment</a>'
@@ -140,11 +157,5 @@ function get_event_date(start_date, start_time, end_date, end_time) {
   var curr_month = d.getMonth();
   var curr_year = d.getFullYear();
 
-  
-  
-  //var d = new Date(start_date);
-  //var t = new Date(start_time.replace(/T|Z/g, " ").replace(/-/g, "/"));
-  
-  //return d.toLocaleDateString(); // + ' ' + t.toLocaleTimeString();
   return m_names[curr_month] + ' ' + curr_date;
 }

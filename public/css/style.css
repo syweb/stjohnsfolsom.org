@@ -131,12 +131,12 @@ p{padding-bottom:15px; line-height:24px; padding-bottom:15px;}
 .name-title-text a:hover{color:#aed5d5; text-decoration:underline;}
 .name-title-text a:active{color:#aed5d5; text-decoration:none;}
 
-.name-title-where{color:#fff; font-weight:bold; color:#fff; font-size:18px;  padding-bottom:5px; padding-top:5px; padding-right:48px; text-align:right;}
+.name-title-where{color:#fff; font-style: italic; /*font-weight:bold;*/ color:#fff; font-size:18px;  padding-bottom:5px; padding-top:5px; padding-right:48px; text-align:right;}
 
 /*-- top-menu --*/
 .top-menu{height:50px; background:#333 }/* url(../images/bg-top-menu.gif) repeat-x; */
 
-.level-1 li{text-align:center; font-size:15px; color:#fff; line-height:50px; /* font-family:georgia,sans-serif, Arial, Helvetica; */ } 
+.level-1 li{text-align:center; font-size:15px; color:#fff; line-height:50px; font-size:17px;  /* font-family:georgia,sans-serif, Arial, Helvetica; */ } 
 .level-1 li a{color:#b9b5b5; text-decoration:none; outline:none;}
 .level-1 li a:link{color:#b9b5b5; text-decoration:none;}
 .level-1 li a:visited{color:#fff; text-decoration:none;}
