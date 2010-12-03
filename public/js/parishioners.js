@@ -60,6 +60,47 @@ function get_events(div_to_append) {
 }
 
 
+function get_group_bulletins(div_to_append, group_id, number) {
+
+  if (typeof number == "undefined") {
+      number = 6;
+  }
+
+  $.ajax({
+    url: PARISH_URL + "/get_group_announcements.json/" + group_id,
+    cache: false,
+    type: 'get',
+    dataType: 'jsonp',
+    success: function(response) {
+    
+      $(div_to_append).append('<div class="bulletins-box"><h3>Bulletins</h3><dl class="bulletins-dl"></dl></div>');
+      
+      $.each(response, function(i, item) {
+        var dt = response[i].updated_at.replace(/T|Z/g, " ").replace(/-/g, "/");
+
+        var event_link = 'event-link-' + response[i].id;
+
+        if (i < number) {
+
+      
+          if (response[i].has_downloads == true) {
+            //'<br/><a href="#">Download Attachment</a>'
+            download_link = PARISH_URL + '/publik/download/' + response[i].id;
+
+            $(div_to_append).find('.bulletins-dl').append('<span id="' + event_link + '"></span>');
+
+            $(div_to_append).find('#'+event_link).append('<dd class="time"><a href="' + download_link + '">' + response[i].title + '</a></dd><dd class="sptr"></dd>');
+          }
+        }
+
+      });
+
+
+    }
+  });
+
+}
+
 
 function get_group_announcements(div_to_append, group_id, number) {
 

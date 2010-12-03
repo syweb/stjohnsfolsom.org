@@ -16,6 +16,7 @@
 	<script type="text/javascript">
 
   $(document).ready(function() {
+    get_group_bulletins("#group_bulletins", "1123");
     get_group_announcements("#group_announcements", "1116");
     get_group_events("#group_events", "1116");
   });
@@ -259,31 +260,10 @@
 							</div>
 						</div>
 						<div class="col260">
-							<h3>Current/Past Bulletins</h3>
-							<div class="bulletins-box" style="width:200px;">
-								<dl>
-									
-									<dd class="time"><a href="files/bulletin_November_7_2010.pdf" >November 7, 2010</a></dd>
-									<dd class="sptr"></dd>
-								
-									
-									<dd class="time"><a href="files/bulletin_October_31_2010.pdf" >October 31, 2010</a> </dd>
-									<dd class="sptr"></dd>
-								
-									
-									<dd class="time"><a href="files/bulletin_October_24_2010.pdf" >October 24, 2010</a></dd>
-									<dd class="sptr"></dd>
-								
-									
-									<!-- <dd class="time"><a href="files/bulletin_October_17_2010.pdf" >October 17, 2010</a></dd>
-																		<dd class="sptr"></dd>
-																		
-																		<dd class="time"><a href="files/bulletin_October_10_2010.pdf" >October 10, 2010</a></dd>
-																		<dd class="sptr"></dd> -->
-								
-								
-								</dl>
+							<div>
+								<div id='group_bulletins' class='group_bulletins' > </div>
 							</div>
+
 							<div>
 								<div id='group_announcements' class='group_announcements' > </div>	
 								<div class="event-box-sptr"></div>
