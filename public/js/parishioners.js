@@ -157,9 +157,11 @@ function get_group_events(div_to_append, group_id, number) {
     dataType: 'jsonp',
     success: function(response) {
 
+      
+
       $(div_to_append).append('<div class="quicklink"><h4>Upcoming Events</h4><ul id="events"></ul>');
-        
-      $.each(response, function(i, item) {
+      
+      $.each(response.reverse(), function(i, item) {
         var dt = response[i].updated_at.replace(/T|Z/g, " ").replace(/-/g, "/");
         
         date_string = get_event_date(response[i].start_date, response[i].start_time, response[i].end_date, response[i].end_time);

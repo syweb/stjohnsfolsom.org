@@ -8,6 +8,17 @@
 	<title>St. John The Baptist Catholic Church</title>
 	<link href="css/style.css" rel="stylesheet" type="text/css" />
 
+	<script type="text/javascript" src="js/jquery-1.4.2.min.js"></script>
+	<script type="text/javascript" src="js/parishioners.js"></script>
+
+	<script type="text/javascript">
+  $(document).ready(function() {
+    get_group_announcements("#group_announcements", "1015");
+    get_group_events("#group_events", "1015");
+  });
+
+
+	</script>
 	
 </head>
 
@@ -71,6 +82,24 @@
 							
 						<h5 >Contact</h5>
 						<p>Elaine Massey 351-0305</p>
+						
+						<h5>Liturgical Information</h5>
+						<div class="bulet-list1">
+						<ul>
+						  <li>
+						<a href="files/Guidelines_for_EMs_Training_rev_5-09.pdf">EM Guidelines</a>
+            </li>
+            <li>
+          	<a href="files/em_lector_schedule_2009.pdf">EM/Lector Schedule for 2009</a>
+            </li>
+            <li>
+          	<a href="files/Church_Diagram_w-8_EM.pdf">EM Stations for Sun. 7:30 a.m. and 6:00 p.m. Mass</a>
+          </li>
+            <li>
+          	<a href="files/Church_Diagram_w-10_EM.pdf">EM Stations for Sat. 5:00 p.m., Sun. 9:15 a.m. and 11:30 a.m. Mass</a>
+						</li>
+						</ul>
+						</div>
 					</div>
 											
 				</div>
@@ -102,6 +131,14 @@
 						
 						</ul>
 					</div>
+					<div class="event-box-sptr"></div>	
+					<div class="sptr20"></div>
+					<!-- event box start -->
+					<div id='group_events' class='group_events' > </div>
+					<div class="event-box-sptr"></div>	
+					<div id='group_announcements' class='group_announcements' > </div>
+					<div class="event-box-sptr"></div>	
+					<!-- event box end -->
 					
 				</div>
 				<!-- incol2 end -->
