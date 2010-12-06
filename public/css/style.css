@@ -8,7 +8,7 @@
 |	Last Update	:	04-Aug-2010				|
 |--------------------------------------------*/
 
-html, body{font-size:14px;  background:#f1f1f1 url(../images/bg-body.gif) no-repeat top center; margin:0px; padding:0px; font-family:Calibri, Arial, Helvetica, sans-serif; font-weight:normal; color:#3b3b3b;} /*georgia,sans-serif,Arial,Helvetica*/
+html, body{font-size:14px;   margin:0px; background:#f1f1f1 url(../images/bg-page.gif)repeat-x; padding:0px; font-family:Calibri, Arial, Helvetica, sans-serif; font-weight:normal; color:#3b3b3b;} /*georgia,sans-serif,Arial,Helvetica*/
 
 div, dl, dd, ul, li, h1, h2,h3,h4,h5, p, img, form{ margin:0px; padding:0px;}
 *{ margin:0px; padding:0px;}
@@ -17,7 +17,7 @@ ul, li{ list-style-type:none;}
 
 .b{border:1px solid #ff0000;}
 
-.wraper{ width:100%;}
+.wraper{ width:100%; background:url(../images/bg-body.gif) no-repeat top center; }
 
 .container{ width:960px; margin:0px auto; padding:0px; }
 
@@ -57,14 +57,16 @@ p{padding-bottom:15px; line-height:24px; padding-bottom:15px;}
 .column-l{float:left;}
 .column-r{float:right;}
 
+.col215{width:215px; float:left;}
 .col120{width:120px; float:left;}
 
 .col200{width:200px; float:right;}
 .col200-1{width:200px; float:left;}
 .col260{width:260px; float:right;}
+.col280{width:280px; float:right;}
 
 
-
+.col320{width:320px; float:left;}
 .col340{width:340px; float:left;}
 .col350{width:350px; float:left;}
 .col380{width:380px; float:left;}
@@ -231,9 +233,9 @@ p{padding-bottom:15px; line-height:24px; padding-bottom:15px;}
 .contant .container{width:940px;}
 
 /*-- Home --*/
-.mass-box{width:340px; font-size:13px; padding-bottom:15px; }
+.mass-box{width:320px; font-size:13px; padding-bottom:15px; }
 .mass-box .day{float:left; color:#fff; width:72px; height:25px; padding:0 10px 0 8px; background:url(../images/bg-day-mass-day.gif) no-repeat; line-height:25px;}
-.mass-box .time{float:left; width:245px; line-height:25px;}
+.mass-box .time{float:left; width:225px; line-height:25px;}
 .mass-box .sptr{clear:both; height:30px; background:url(../images/sptr-day-mass.gif) 0px center no-repeat ;}
 
 .bulletins-box{width:260px; font-size:13px; padding-bottom:5px; }
@@ -384,3 +386,4 @@ p{padding-bottom:15px; line-height:24px; padding-bottom:15px;}
 /*-- slider End --*/
 
 .special-event-detail{padding-bottom:20px;}
+.announcements .event-box .event-dtail p{ padding:0 0px 8px 0;  }
