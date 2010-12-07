@@ -349,6 +349,9 @@ p{padding-bottom:15px; line-height:24px; padding-bottom:15px;}
 .event-box .event-dtail a:active{ text-decoration:none; color:#16403f;}
 .event-box-sptr{background:url(../images/bg-sptr-eventbox.png) center top no-repeat; font-size:1px; height:10px; line-height:10px; clear:both; margin-bottom:10px;}
 
+.announcements .event-title{ padding-left:20px; background:#5CA1A0 url(../images/arrow-off.gif) 5px 8px no-repeat;}
+.announcements .ui-state-active{background:#5CA1A0 url(../images/arrow-on.gif) 5px 8px no-repeat; }
+
 /* event-box end */
 
 .map-box{border:5px solid #ccc;}
@@ -387,3 +390,5 @@ p{padding-bottom:15px; line-height:24px; padding-bottom:15px;}
 
 .special-event-detail{padding-bottom:20px;}
 .announcements .event-box .event-dtail p{ padding:0 0px 8px 0;  }
+
+

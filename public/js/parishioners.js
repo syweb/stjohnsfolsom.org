@@ -13,7 +13,15 @@ $(document).ready(function() {
   //get_group_events("#group_events", "101233");
 });
 
+function prepare_accordian(){
+	$("#accordion").accordion({ header: ".li-title" });
 
+	//hover states on the static widgets
+	$('#dialog_link, ul#icons li').hover(
+		function() { $(this).addClass('ui-state-hover'); }, 
+		function() { $(this).removeClass('ui-state-hover'); }
+	);
+}
 
 function get_announcements(div_to_append) {
   $.ajax({
@@ -115,7 +123,7 @@ function get_group_announcements(div_to_append, group_id, number) {
     dataType: 'jsonp',
     success: function(response) {
     
-      $(div_to_append).append('<div class="event-box"><div class="box-title">Announcements</div></div>');
+      $(div_to_append).append('<div id="accordion" class="event-box"><div class="box-title">Announcements</div></div>');
       
       $.each(response, function(i, item) {
         var dt = response[i].updated_at.replace(/T|Z/g, " ").replace(/-/g, "/");
@@ -124,8 +132,8 @@ function get_group_announcements(div_to_append, group_id, number) {
 
         if (i < number) {
 
-          $(div_to_append).find('.event-box').append('<div class="event-title">' + response[i].title + '</div>');
-          $(div_to_append).find('.event-box').append('<div class="event-dtail">' + response[i].content + '<span id="' + event_link + '"></span></div>');
+          $(div_to_append).find('.event-box').append('<div class="event-title li-title">' + response[i].title + '</div>');
+          $(div_to_append).find('.event-box').append('<div class="event-dtail li-data">' + response[i].content + '<span id="' + event_link + '"></span></div>');
       
           if (response[i].has_downloads == true) {
             //'<br/><a href="#">Download Attachment</a>'
@@ -135,8 +143,8 @@ function get_group_announcements(div_to_append, group_id, number) {
         }
 
       });
-
-
+		
+	  prepare_accordian();
     }
   });
 
