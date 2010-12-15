@@ -83,6 +83,16 @@
 		</script>
 		<![endif]-->
 	
+		<script type="text/javascript" src="js/parishioners.js"></script>
+		<script type="text/javascript">
+
+    $(document).ready(function() {
+      get_group_events("#group_events", "1164");
+  	});
+
+  	</script>
+  
+	
 </head>
 
 <body>
@@ -228,97 +238,11 @@
 				<!-- incol1 end -->
 				<!-- incol2 start -->
 				<div class="incol2 ">
-					<div class="quicklink">
-						<h4>Upcoming Special Events</h4>
-						<ul id="events">
-							<li date="11/12/2010">
-								<div class="date">Sep 12</div>
-								<a href="#" class="active"> Soccer Challenge  </a>
-								<div class="sptr1"></div>
-							</li>
-							<li date="12/05/2010">
-								<div class="date">Dec 05</div>
-								<a href="#1">Breakfast with St. Nick</a>
-								<div class="sptr1"></div>
-							</li>
-							<li date="12/11/2010">
-								<div class="date">Dec 11</div>
-								<a href="#2">Women’s Christmas Brunch</a>
-								<div class="sptr1"></div>
-							</li>
-							<li date="12/19/2010">
-								<div class="date">Dec 19</div>
-								<a href="#3">Christmas Gifts for Children</a>
-								<div class="sptr1"></div>
-							</li>
-							
-							<li date="01/15/2011">
-								<div class="date">Jan 15</div>
-								<a href="#">Pacific Islander Aloha Festival</a>
-								<div class="sptr1"></div>
-							</li>
-							<li date="01/17/2011">
-								<div class="date">Jan 17</div>
-								<a href="#">Fun Run</a>
-								<div class="sptr1"></div>
-							</li>
-              <li date="01/18/2011">
-								<div class="date">Jan 18</div>
-								<a href="#">Crab Feed &amp; Auction</a>
-								<div class="sptr1"></div>
-							</li>
-              <li date="02/19/2011">
-								<div class="date">Feb 19</div>
-								<a href="#">School Musical/Play</a>
-								<div class="sptr1"></div>
-							</li>
-              <li date="02/20/2011">
-								<div class="date">Feb 20</div>
-								<a href="#">Knights Free Throw Championship</a>
-								<div class="sptr1"></div>
-							</li>
-              <li date="02/21/2011">
-								<div class="date">Feb 21</div>
-								<a href="#">Breakfast w/St. Nick</a>
-								<div class="sptr1"></div>
-							</li>
-              <li date="02/22/2011">
-								<div class="date">Feb 22</div>	
-								<a href="#">Breakfast w/St. Patrick</a>
-								<div class="sptr1"></div>
-							</li>
-              <li date="03/23/2011">
-								<div class="date">Mar 23</div>	
-								<a href="#">Women's Christmas Brunch</a>
-								<div class="sptr1"></div>
-							</li>
-              <li date="03/24/2011">
-								<div class="date">Mar 24</div>
-								<a href="#">Healing Mass?</a>
-								<div class="sptr1"></div>
-							</li>
-              <li date="03/25/2011">
-								<div class="date">Mar 25</div>
-								<a href="#">WINGS Events</a>
-								<div class="sptr1"></div>
-							</li>
-              <li date="03/26/2011">
-								<div class="date">Mar 26</div>
-								<a href="#">Easter Egg Hunt</a>
-								<div class="sptr1"></div>
-							</li>
-              <li date="03/27/2011">
-								<div class="date">Mar 27</div>	
-								<a href="#">Halloween Trunk</a>
-								<div class="sptr1"></div>
-							</li>
-              <li date="03/28/2011">
-								<div class="date">Mar 28</div>
-								<a href="#">Other Local Events</a>
-								<div class="sptr1"></div>
-							</li>
-            </ul>
-					</div>
+
+
+					<div id='group_events' class='group_events' > </div>
+
+
 					
 				</div>
 				<!-- incol2 end -->
