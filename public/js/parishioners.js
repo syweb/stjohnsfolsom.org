@@ -17,7 +17,7 @@ function for_accordian(){
 	//Accordian Start
 	$('.event-dtail').css({ display:"none"});
 	$('.event-dtail:first').css({ display:"block"});
-	$('.event-title:first').addClass('ui-state-active')
+	$('.event-title:first').addClass('ui-state-active');
 	
 	
 	$(".announcements .event-title").click(function(){
@@ -26,13 +26,13 @@ function for_accordian(){
 			}
 			else{
 				$('.announcements .event-dtail').slideUp("slow");
-				$('.announcements .event-title').removeClass('ui-state-active')
+				$('.announcements .event-title').removeClass('ui-state-active');
 				
 				$(this).next().slideDown("slow");
-				$(this).addClass('ui-state-active')
+				$(this).addClass('ui-state-active');
 			}
 			
-		})
+		});
 
 
 	$(".event-list .event-title").click(function(){
@@ -41,13 +41,13 @@ function for_accordian(){
 			}
 			else{
 				$('.event-list .event-dtail').slideUp("slow");
-				$('.event-list .event-title').removeClass('ui-state-active')
+				$('.event-list .event-title').removeClass('ui-state-active');
 
 				$(this).next().slideDown("slow");
-				$(this).addClass('ui-state-active')
+				$(this).addClass('ui-state-active');
 			}
 
-		})
+		});
 	//Accordian End
 }
 
