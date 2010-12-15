@@ -206,14 +206,14 @@ function get_group_events(div_to_append, group_id, number) {
 
         detail = '';
         if (response[i].description == 'NA') {
-          detail = '<div class="event-dtail"><span id="' + event_link + '"></span></div>';
+          detail = '<div class="event-dtail">'; //'<span id="' + event_link + '"></span></div>';
         } else {
-          detail = '<div class="event-dtail"><br/>' + response[i].description + '</div><span id="' + event_link + '"></span>';
+          detail = '<div class="event-dtail"><br/>' + response[i].description + '</div>'; //<span id="' + event_link + '"></span>';
         }
 
         if (i < number) {
           $(div_to_append).find('#events').append('<li><div class="event-title "><div class="date">' + date_string + '</div>' + response[i].title + '</div'
-          //+ detail
+          + detail
           + '<div class="sptr1"></div></li>');
         }
 
