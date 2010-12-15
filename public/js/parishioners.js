@@ -13,14 +13,27 @@ $(document).ready(function() {
   //get_group_events("#group_events", "101233");
 });
 
-function prepare_accordian(){
-	$("#accordion").accordion({ header: ".li-title" });
-
-	//hover states on the static widgets
-	$('#dialog_link, ul#icons li').hover(
-		function() { $(this).addClass('ui-state-hover'); }, 
-		function() { $(this).removeClass('ui-state-hover'); }
-	);
+function for_accordian(){
+	//Accordian Start
+	$('.event-dtail').css({ display:"none"});
+	$('.event-dtail:first').css({ display:"block"});
+	$('.event-title:first').addClass('ui-state-active')
+	
+	
+	$(".announcements .event-title").click(function(){
+			if($(this).attr("class").match(/ui-state-active/) == 'ui-state-active'){
+				
+			}
+			else{
+				$('.event-dtail').slideUp("slow");
+				$('.event-title').removeClass('ui-state-active')
+				
+				$(this).next().slideDown("slow");
+				$(this).addClass('ui-state-active')
+			}
+			
+		})
+	//Accordian End
 }
 
 function get_announcements(div_to_append) {
@@ -132,8 +145,8 @@ function get_group_announcements(div_to_append, group_id, number) {
 
         if (i < number) {
 
-          $(div_to_append).find('.event-box').append('<div class="event-title li-title">' + response[i].title + '</div>');
-          $(div_to_append).find('.event-box').append('<div class="event-dtail li-data">' + response[i].content + '<span id="' + event_link + '"></span></div>');
+          $(div_to_append).find('.event-box').append('<div class="event-title ">' + response[i].title + '</div>');
+          $(div_to_append).find('.event-box').append('<div class="event-dtail ">' + response[i].content + '<span id="' + event_link + '"></span></div>');
       
           if (response[i].has_downloads == true) {
             //'<br/><a href="#">Download Attachment</a>'
@@ -144,7 +157,7 @@ function get_group_announcements(div_to_append, group_id, number) {
 
       });
 		
-	  prepare_accordian();
+	  for_accordian();
     }
   });
 

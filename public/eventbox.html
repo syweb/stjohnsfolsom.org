@@ -41,6 +41,30 @@
 	$(function() {
 	    setInterval( "slideSwitch()", 6000 );
 	});
+	
+	$(document).ready(function(){
+		
+		$('.event-dtail').css({ display:"none"});
+		$('.event-dtail:first').css({ display:"block"});
+		$('.event-title:first').addClass('ui-state-active')
+		
+		
+		$(".announcements .event-title").click(function(){
+				if($(this).attr("class").match(/ui-state-active/) == 'ui-state-active'){
+					
+				}
+				else{
+					$('.event-dtail').slideUp("slow");
+					$('.event-title').removeClass('ui-state-active')
+					
+					$(this).next().slideDown("slow");
+					$(this).addClass('ui-state-active')
+				}
+				
+			})
+	  
+	 });
+	
 
 	</script>
 
@@ -63,7 +87,68 @@
 </head>
 
 <body>
-	
+	<div class="announcements">
+									<div class="group_announcements" id="group_announcements"> <div class="event-box ui-accordion ui-widget ui-helper-reset ui-accordion-icons" id="accordion" role="tablist"><div class="box-title">Announcements</div><div class="event-title li-title ui-accordion-header ui-helper-reset  ui-corner-top" role="tab" aria-expanded="true" tabindex="0"><span class="ui-icon ui-icon-triangle-1-s"></span>Christmas Mass Schedule 2010</div><div class="event-dtail li-data ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom ui-accordion-content-active" role="tabpanel"><p><strong>Advent Penance Service</strong></p><p>Friday, December 17 @ 7:00 P.M.</p><p><strong>Christmas Vigil Masses</strong></p><p>Friday, December 24th</p><p>Children’s Mass in Parish Hall @ 4:00 P.M. (Music and Play
+	begins @ 3:30 P.M.)</p>
+
+	<p>&nbsp;Mass in the Church @ 4:00 P.M. (Music begins @ 3:40 P.M.)</p>
+
+	<p>&nbsp;Mass @ 6:30 P.M. (Music begins @ 6:00 P.M.)</p>
+
+	<p>&nbsp;Teen Mass @ 9:00 P.M. (Music begins @ 8:30 P.M.)</p><p>“Midnight” Mass @ 11:30 P.M. (Music begins @ 11:05 P.M.)</p>
+
+	<p><strong>Christmas Day Masses</strong> @ 9:15&nbsp;
+	and&nbsp; 11:30 A.M. NO 5:00 PM VIGIL
+	MASS</p><p>Sunday, December 26th - Normal Mass Schedule</p><p>January 1st, Solemnity of the Blessed Virgin Mary, the
+	Mother of God - Not a Holy Day of Obligation</p>
+
+	<p>Saturday, January 1st - Normal Mass Schedule</p>
+
+	<p>Sunday, January 2nd - Normal Mass Schedule</p><span id="event-link-6063"></span></div><div class="event-title li-title ui-accordion-header ui-helper-reset ui-state-default ui-corner-all" role="tab" aria-expanded="false" tabindex="-1"><span class="ui-icon ui-icon-triangle-1-e"></span>Mary and the Eucharistic Life</div><div class="event-dtail li-data ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom"  role="tabpanel"><p>WINGS presents Katrina Zeno</p>
+
+	      <p>Saturday&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	      January 15, 2011&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	      9:00a.m.-4:00p.m.</p>
+
+	      <p>&nbsp;St John the Baptist Parish - Garden Room and Church</p><p>Our parish is privileged to have Katrina Zeno direct us in a
+	      day long mini-retreat. The grace that suffused Mary's life is the same grace
+	      God offers us. This day looks at how each of us is called to be overshadowed by
+	      the Holy Spirit so that we can imitate Mary as Christ-bearers. Our day will
+	      conclude with a beautiful silent prayer time in church with the exposition of
+	      the Blessed Sacrament and Benediction. Reconciliation will be available.
+	      Breakfast and lunch are included.&nbsp; Please
+	      send a $30 check with your name, address, email and phone number to:</p><p>St John the Baptist Parish - WINGS Mini - Retreat</p><p>307 Montrose Drive.&nbsp;
+	      Folsom, CA&nbsp; 95630</p><p>Phone:(916) 985-2065</p><p>8:15 am optional mass.&nbsp;</p><p>Mirum notare quam littera gothica quam nunc equitur
+	      mutationem consuetudium. &nbsp;$6</p><p>Lectorum est notare quam littera gothica quam nunc putamus
+	      parum claram. &nbsp;$7</p><p>Quam littera gothica quam, anteposuerit litterarum formas
+	      humanitatis. &nbsp;$8</p><p>Seacula quarta et quinta decima eodem modo typi qui.&nbsp;$8</p><p>Futu rumui nunc nobis videntur parum clari fiant sollemnes
+	      in futurum. &nbsp;$9</p><span id="event-link-6069"><br><a href="https://stjohnfolsom.schoolyardapp.com/publik/download/6069">Download Attachment</a></span></div><div class="event-title li-title ui-accordion-header ui-helper-reset ui-state-default ui-corner-all" role="tab" aria-expanded="false" tabindex="-1"><span class="ui-icon ui-icon-triangle-1-e"></span>Thank you for your support - Troops Packages! </div><div class="event-dtail li-data ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom"  role="tabpanel"><p></p><p>A special thanks to everyone who provided goodies for the
+	care packages for the troops. It was very impressive to see all the fresh baked
+	goods, handmade cards, and toiletries for our soldiers. Also, thank you to the
+	students from St. Francis, Jesuit, and SJNDS who came out to pack the 43
+	boxes!!&nbsp; We could not have done this without
+	your help. And last, thanks to all for their generous contributions for the
+	postage. We had enough money to cover all the postage and all the care packages
+	were sent on their way.&nbsp; God Bless Our Soldiers!</p><span id="event-link-6059"><br><a href="https://stjohnfolsom.schoolyardapp.com/publik/download/6059">Download Attachment</a></span></div><div class="event-title li-title ui-accordion-header ui-helper-reset ui-state-default ui-corner-all" role="tab" aria-expanded="false" tabindex="-1"><span class="ui-icon ui-icon-triangle-1-e"></span>Stewardship-A way of living</div><div class="event-dtail li-data ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom"  role="tabpanel"><p>Stewardship encourages everyone to participate in the task of building the Kingdom of God. God has gifted each of us with everything &mdash; our very lives.</p>
+	<p>We are responsible for caring for these gifts, and accountable for what we do with these gifts. Stewardship rejects the notion that we must “have it all” and, instead, demonstrates the value of giving in love, in service and in justice.</p><span id="event-link-5577"></span></div><div class="event-title li-title ui-accordion-header ui-helper-reset ui-state-default ui-corner-all" role="tab" aria-expanded="false" tabindex="-1"><span class="ui-icon ui-icon-triangle-1-e"></span>Vocations</div><div class="event-dtail li-data ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom"  role="tabpanel"><p>PRAYER FOR VOCATIONS</p>
+	<p>Loving God, You speak to us&nbsp;and nourish us through the&nbsp;life of this church community.</p>
+	<p>In the name of Jesus, we ask you&nbsp;to send your Spirit to us so that&nbsp;men and women among us, young &nbsp;and old, will respond to your call to&nbsp;service and leadership in the church.</p>
+	<p>We pray, especially, in our day, for&nbsp;those who hear your invitation to&nbsp;be a priest, sister, brother, or deacon.</p>
+	<p>Many those who are opening their hearts&nbsp;and minds to your call be encouraged&nbsp;and strengthened through our enthusiasm&nbsp;in your service. Amen&nbsp;</p>
+	<p>FOR THOSE OF YOU CONSIDERING A VOCATION</p>
+	<p>If you or someone you know are considering a Vocation with the Catholic Church, please call our Parish Office (985-2065) to speak with a priest or deacon.</p>
+	<p>Please also visit the Diocese of Sacramento website:</p>
+	<ul>
+	<li>http://www.diocese-sacramento.org/vocations/vocations.html</li></ul>
+	<p>The following websites may also be of interest to you as well:</p>
+	<ul>
+	<li>www.vocations.com</li>
+	<li>www.vocation.com</li>
+	<li>www.romancatholicvocations.blogspot.com</li></ul><span id="event-link-5540"></span></div><div class="event-title li-title ui-accordion-header ui-helper-reset ui-state-default ui-corner-all" role="tab" aria-expanded="false" tabindex="-1"><span class="ui-icon ui-icon-triangle-1-e"></span>Christmas Gifts for Children</div><div class="event-dtail li-data ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom"  role="tabpanel"><p>The St. Vincent de Paul “Giving Tree” is in the vestibule of the church. The tree has ornaments &nbsp;for girls and boys up to age 13. You can select an ornament and purchase a gift for a child. The &nbsp;gift does not need to be wrapped. You can leave the gift in the barrel or under the tree until Sunday, December 19th. Thank you for your continued generosity and help in making this Christmas brighter for children in our community. May you have a Merry Christmas!.</p><span id="event-link-5537"></span></div></div></div>	
+									<div class="event-box-sptr"></div>
+								</div>
+								
+								
 	<!--wraper start -->
 	<div class="wraper">
 		<!-- header start-->
