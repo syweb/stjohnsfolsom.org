@@ -25,13 +25,28 @@ function for_accordian(){
 				
 			}
 			else{
-				$('.event-dtail').slideUp("slow");
-				$('.event-title').removeClass('ui-state-active')
+				$('.announcements .event-dtail').slideUp("slow");
+				$('.announcements .event-title').removeClass('ui-state-active')
 				
 				$(this).next().slideDown("slow");
 				$(this).addClass('ui-state-active')
 			}
 			
+		})
+
+
+	$(".event-list .event-title").click(function(){
+			if($(this).attr("class").match(/ui-state-active/) == 'ui-state-active'){
+
+			}
+			else{
+				$('.event-list .event-dtail').slideUp("slow");
+				$('.event-list .event-title').removeClass('ui-state-active')
+
+				$(this).next().slideDown("slow");
+				$(this).addClass('ui-state-active')
+			}
+
 		})
 	//Accordian End
 }
@@ -149,7 +164,6 @@ function get_group_announcements(div_to_append, group_id, number) {
           $(div_to_append).find('.event-box').append('<div class="event-dtail ">' + response[i].content + '<span id="' + event_link + '"></span></div>');
       
           if (response[i].has_downloads == true) {
-            //'<br/><a href="#">Download Attachment</a>'
             download_link = PARISH_URL + '/publik/download/' + response[i].id;
             $(div_to_append).find('#'+event_link).append('<br/><a href="' + download_link + '">Download Attachment</a>');
           }
@@ -180,26 +194,33 @@ function get_group_events(div_to_append, group_id, number) {
 
       
 
-      $(div_to_append).append('<div class="quicklink"><h4>Upcoming Events</h4><ul id="events"></ul>');
+      $(div_to_append).append('<div id="accordion" class="quicklink"><h4>Upcoming Events</h4><ul id="events"></ul>');
       
       $.each(response.reverse(), function(i, item) {
         var dt = response[i].updated_at.replace(/T|Z/g, " ").replace(/-/g, "/");
         
         date_string = get_event_date(response[i].start_date, response[i].start_time, response[i].end_date, response[i].end_time);
+        var event_link = 'event-link-' + response[i].id;
 
-        //$(div_to_append).find('.event-box').append('<div class="event-title">' + response[i].title + '<br/><span>' + date_string + '</span></div>');
-        //$(div_to_append).find('.event-box').append('<div class="event-dtail">' + response[i].description + '</div>');
+
+
+        detail = '';
+        if (response[i].description == 'NA') {
+          detail = '<div class="event-dtail"><span id="' + event_link + '"></span></div>';
+        } else {
+          detail = '<div class="event-dtail"><br/>' + response[i].description + '</div><span id="' + event_link + '"></span>';
+        }
 
         if (i < number) {
-          $(div_to_append).find('#events').append('<li><div class="date">' + date_string + '</div>' + response[i].title 
+          $(div_to_append).find('#events').append('<li><div class="event-title "><div class="date">' + date_string + '</div>' + response[i].title + '</div'
+          //+ detail
           + '<div class="sptr1"></div></li>');
         }
 
-        //if (response[i].has_downloads == true) {
-          //'<br/><a href="#">Download Attachment</a>'
-          //download_link = PARISH_URL + '/download/' + response[i].id;
-          //$(div_to_append).find('.event-box').find('.event-dtail').append('<br/><a href="' + download_link + '">Download Attachment</a>');
-        //}
+        if (response[i].has_downloads == true) {
+          download_link = PARISH_URL + '/publik/download/' + response[i].id;
+          $(div_to_append).find('#'+event_link).append('<br/><a href="' + download_link + '">Download Attachment</a>');
+        }
       });
       
       $(div_to_append).append('</div>');
