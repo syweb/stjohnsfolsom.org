@@ -160,7 +160,7 @@ function get_group_announcements(div_to_append, group_id, number) {
 
         if (i < number) {
 
-          $(div_to_append).find('.event-box').append('<div class="event-title ">' + response[i].title + '</div>');
+          $(div_to_append).find('.event-box').append('<div class="event-title "><a >' + response[i].title + '</a></div>');
           $(div_to_append).find('.event-box').append('<div class="event-dtail ">' + response[i].content + '<span id="' + event_link + '"></span></div>');
       
           if (response[i].has_downloads == true) {
