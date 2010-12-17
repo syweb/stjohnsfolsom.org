@@ -7,6 +7,44 @@
 
 	<title>St. John The Baptist Catholic Church</title>
 	<link href="css/style.css" rel="stylesheet" type="text/css" />
+	<!-- Image slider Start  -->
+<script type="text/javascript" src="js/jquery-1.2.6.min.js"></script>
+   <script type="text/javascript" src="js/date.js"></script>
+
+<script type="text/javascript">
+
+function slideSwitch() {
+    var $active = $('#slideshow IMG.active');
+
+    if ( $active.length == 0 ) $active = $('#slideshow IMG:last');
+
+    // use this to pull the images in the order they appear in the markup
+    var $next =  $active.next().length ? $active.next()
+        : $('#slideshow IMG:first');
+
+    // uncomment the 3 lines below to pull the images in random order
+
+    // var $sibs  = $active.siblings();
+    // var rndNum = Math.floor(Math.random() * $sibs.length );
+    // var $next  = $( $sibs[ rndNum ] );
+
+
+    $active.addClass('last-active');
+
+    $next.css({opacity: 0.0})
+        .addClass('active')
+        .animate({opacity: 1.0}, 1000, function() {
+            $active.removeClass('active last-active');
+        });
+}
+
+$(function() {
+    setInterval( "slideSwitch()", 5000 );
+});
+
+</script>
+
+<!-- Image slider End  -->
 
 	
 </head>
@@ -56,7 +94,14 @@
 				<!-- incol1 start -->
 				<div class="incol1 broder1">
 					<div class="incol1-inner">
-						<div class="img-box-690-226"><img alt=" " src="images/ministries.jpg"/></div>
+						<div class="img-box-690-226">
+             	<div id="slideshow"> 
+            				<img alt="" src="images/family-fellowship.jpg" class="active"/>
+                    <img alt="" src="images/family-fellowship1.jpg" />
+                    <img alt="" src="images/family-fellowship2.jpg" />
+                    
+                </div>
+            </div>
 						
 						<p>Connect with other St. John’s parishioners while enjoying fun, faith-inspired activities for the entire family. Family Fellowship events are scheduled throughout the year and are a great way to serve and become a part of the St. John’s community. </p>
 						
@@ -67,7 +112,7 @@
 						
 							
 						<h5 >Contact</h5>
-						<p>Katie McCoy and Mary Wilhelm at: <a href="mailto:&#x4B;&#x61;&#x74;&#x69;&#x65;&#x20;&#x4D;&#x63;&#x43;&#x6F;&#x79;&#x20;&#x61;&#x6E;&#x64;&#x20;&#x4D;&#x61;&#x72;&#x79;&#x20;&#x57;&#x69;&#x6C;&#x68;&#x65;&#x6C;&#x6D;&#x20;&#x61;&#x74;&#x3A;&#x20;&#x46;&#x61;&#x6D;&#x69;&#x6C;&#x79;&#x46;&#x65;&#x6C;&#x6C;&#x6F;&#x77;&#x68;&#x69;&#x70;&#x40;&#x53;&#x74;&#x4A;&#x6F;&#x68;&#x6E;&#x73;&#x46;&#x6F;&#x6C;&#x73;&#x6F;&#x6D;&#x2E;&#x6F;&#x72;&#x67;">FamilyFellowhip@StJohnsFolsom.org</a>  </p>
+						<p>Katie McCoy and Mary Wilhelm at: <a href="mailto:FamilyFellowhip@StJohnsFolsom.org">FamilyFellowhip@StJohnsFolsom.org</a>  </p>
 					</div>
 											
 				</div>
