@@ -13,20 +13,23 @@ $(document).ready(function() {
   //get_group_events("#group_events", "101233");
 });
 
-function for_accordian(){
+function for_accordian(accordian_no){
+	
+	accordian_no = '.'+accordian_no + ' ';
+	
 	//Accordian Start
-	$('.event-dtail').css({ display:"none"});
-	$('.event-dtail:first').css({ display:"block"});
-	$('.event-title:first').addClass('ui-state-active');
+	$(accordian_no + '.event-dtail').css({ display:"none"});
+	$(accordian_no + '.event-dtail:first').css({ display:"block"});
+	$(accordian_no + '.event-title:first').addClass('ui-state-active');
 	
 	
-	$(".announcements .event-title").click(function(){
+	$(accordian_no + '.event-title').click(function(){
 			if($(this).attr("class").match(/ui-state-active/) == 'ui-state-active'){
 				
 			}
 			else{
-				$('.announcements .event-dtail').slideUp("slow");
-				$('.announcements .event-title').removeClass('ui-state-active');
+				$(accordian_no + '.event-dtail').slideUp("slow");
+				$(accordian_no + '.event-title').removeClass('ui-state-active');
 				
 				$(this).next().slideDown("slow");
 				$(this).addClass('ui-state-active');
@@ -35,13 +38,13 @@ function for_accordian(){
 		});
 
 
-	$(".event-list .event-title").click(function(){
+	$(accordian_no + ' .event-list .event-title').click(function(){
 			if($(this).attr("class").match(/ui-state-active/) == 'ui-state-active'){
 
 			}
 			else{
-				$('.event-list .event-dtail').slideUp("slow");
-				$('.event-list .event-title').removeClass('ui-state-active');
+				$(accordian_no + '.event-list .event-dtail').slideUp("slow");
+				$(accordian_no + '.event-list .event-title').removeClass('ui-state-active');
 
 				$(this).next().slideDown("slow");
 				$(this).addClass('ui-state-active');
@@ -171,7 +174,7 @@ function get_group_announcements(div_to_append, group_id, number) {
 
       });
 		
-	  for_accordian();
+	  for_accordian('accordian_1');
     }
   });
 
@@ -194,7 +197,7 @@ function get_group_events(div_to_append, group_id, number) {
 
       
 
-      $(div_to_append).append('<div id="accordion" class="quicklink"><h4>Upcoming Events</h4><ul id="events"></ul>');
+      $(div_to_append).append('<div id="accordion" class="cls-events"><h4>Upcoming Events</h4><ul id="events" ></ul>');
       
       $.each(response.reverse(), function(i, item) {
         var dt = response[i].updated_at.replace(/T|Z/g, " ").replace(/-/g, "/");
@@ -212,9 +215,9 @@ function get_group_events(div_to_append, group_id, number) {
         }
 
         if (i < number) {
-          $(div_to_append).find('#events').append('<li><div class="event-title "><div class="date">' + date_string + '</div>' + response[i].title + '</div'
+          $(div_to_append).find('#events').append('<li><div class="event-title "><div class="date">' + date_string + '</div><div class="event-title-text"><a>' + response[i].title + '</a></div><div class="sptr1"></div></div>'
           + detail
-          + '<div class="sptr1"></div></li>');
+          + '</li>');
         }
 
         if (response[i].has_downloads == true) {
@@ -224,7 +227,7 @@ function get_group_events(div_to_append, group_id, number) {
       });
       
       $(div_to_append).append('</div>');
-
+	  for_accordian('accordian_2');	
     }
   });
 
