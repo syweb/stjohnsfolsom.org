@@ -23,7 +23,7 @@ ul, li{ list-style-type:none;}
 
 
 /*-- Link and Text --*/
-a{color:#2e9896; text-decoration:none; outline:none; }
+a{color:#2e9896; text-decoration:none; outline:none;  }
 a:link{color:#2e9896; text-decoration:none;}
 a:visited{color:#2e9896; text-decoration:none;}
 a:hover{color:#3B3B3B; text-decoration:none;}
@@ -352,7 +352,7 @@ p{padding-bottom:15px; line-height:24px; padding-bottom:15px;}
 .indented{padding:10px 20px;}
 
 /* event-box 22-Nov-2010 */
-
+.event-dtail a{word-wrap: break-word;}
 .event-box{padding:1px;   font-size:14px; border:1px solid #ccc;   background:#fff;  }
 .event-box div{margin-bottom:1px;}
 .event-box .box-title{padding:8px;  color:#fff; background:#116362;}
