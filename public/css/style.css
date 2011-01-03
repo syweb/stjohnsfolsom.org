@@ -218,7 +218,7 @@ p{padding-bottom:15px; line-height:24px; padding-bottom:15px;}
 .footer-l{height:77px; background:url(../images/bg-footer-l.gif) top left no-repeat;}
 .footer-r{height:77px; background:url(../images/bg-footer-r.gif) top right no-repeat;}
 
-.footer .container{padding-top:25px;}
+.footer .container{padding-top:15px;}
 .footer .column-l{width:45%; padding-top:14px; }
 .footer .column-r{width:45%;  text-align:right;}
 .footer .column-r span{color:#000; font-family:Calibri, Arial, Helvetica, sans-serif; font-size:12px; font-style:normal;}
@@ -227,6 +227,8 @@ p{padding-bottom:15px; line-height:24px; padding-bottom:15px;}
 .footer a:visited{color:#6c6c6c; text-decoration:none;}
 .footer a:hover{color:#2b817e; text-decoration:underline;}
 .footer a:active{color:#6c6c6c; text-decoration:none;}
+
+.footer-links{padding-bottom:10px; text-align:center;}
 
 /*-- contant --*/
 .contant{padding-bottom:40px; }
@@ -242,7 +244,7 @@ p{padding-bottom:15px; line-height:24px; padding-bottom:15px;}
 .bulletins-box .sptr{clear:both; height:20px; background:url(../images/sptr-day-mass.gif) -20px center no-repeat ;}
 
 .face-book{padding:10px 0 15px 0;}
-.twitter{padding:0 0 15px 0;}
+.twitter{padding:0 0 25px 0;}
 
 .upcomeing-box{padding-bottom:15px; width:260px;  }
 .upcomeing-box .title{height:35px; background:url(../images/bg-upcoming-title.gif) repeat-x; padding-left:10px; color:#fff; font-size:16px; line-height:30px;}
@@ -284,11 +286,12 @@ p{padding-bottom:15px; line-height:24px; padding-bottom:15px;}
 .cls-events ul{border:1px solid #bdbcbd; background:#fff url(../images/bg-upcomeing-box.gif) bottom repeat-x;  }
 
 .cls-events ul .event-title {background:#f6f6f6; border:1px solid #eee; margin-bottom:1px; padding:4px; cursor:pointer;}
-.cls-events ul .event-dtail{padding:4px 4px 10px 4px; background:#fff; }
+.cls-events ul .event-dtail{padding:4px 4px 10px 4px; background:#fff;   }
 
 .cls-events .event-title .date{background: url(../images/bg-date-upcomeing.gif) top left no-repeat; font-family:georgia,sans-serif, Arial, Helvetica;  text-align:center; float:left; height:23px; line-height:23px; width:64px; padding-right:10px;}
 
 .cls-events .event-title .event-title-text{float:left; width:168px; }
+.cls-events .moreeventlinks{border:1px solid #bdbcbd; background:#f6f6f6;  padding:4px; border-top:1px solid #eee;}
 
 
 
@@ -352,7 +355,7 @@ p{padding-bottom:15px; line-height:24px; padding-bottom:15px;}
 .indented{padding:10px 20px;}
 
 /* event-box 22-Nov-2010 */
-.event-dtail a{word-wrap: break-word;}
+.event-dtail,.event-dtail a{word-wrap: break-word;}
 .event-box{padding:1px;   font-size:14px; border:1px solid #ccc;   background:#fff;  }
 .event-box div{margin-bottom:1px;}
 .event-box .box-title{padding:8px;  color:#fff; background:#116362;}

@@ -197,7 +197,7 @@ function get_group_events(div_to_append, group_id, number) {
 
       
 
-      $(div_to_append).append('<div id="accordion" class="cls-events"><h4>Upcoming Events</h4><ul id="events" ></ul>');
+      $(div_to_append).append('<div id="accordion" class="cls-events"><h4>Upcoming Events</h4><ul id="events" ></ul><div class="moreeventlinks"><a href="#">More Events... </a></div>');
       
       $.each(response.reverse(), function(i, item) {
         var dt = response[i].updated_at.replace(/T|Z/g, " ").replace(/-/g, "/");
@@ -224,8 +224,9 @@ function get_group_events(div_to_append, group_id, number) {
           download_link = PARISH_URL + '/publik/download/' + response[i].id;
           $(div_to_append).find('#'+event_link).append('<br/><a href="' + download_link + '">Download Attachment</a>');
         }
+				
       });
-      
+     
       $(div_to_append).append('</div>');
 	  for_accordian('accordian_2');	
     }
