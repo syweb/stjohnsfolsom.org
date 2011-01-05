@@ -197,7 +197,7 @@ function get_group_events(div_to_append, group_id, number) {
 
       
 
-      $(div_to_append).append('<div id="accordion" class="cls-events"><h4>Upcoming Events</h4><ul id="events" ></ul><div class="moreeventlinks"><a href="#">More Events... </a></div>');
+      $(div_to_append).append('<div id="accordion" class="cls-events"><h4>Upcoming Events</h4><ul id="events" ></ul>');
       
       $.each(response.reverse(), function(i, item) {
         var dt = response[i].updated_at.replace(/T|Z/g, " ").replace(/-/g, "/");
