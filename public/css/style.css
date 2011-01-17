@@ -36,7 +36,7 @@ a:active{color:#2e9896; text-decoration:none;}
 .grn-textu a:hover{color:#2e9896; text-decoration:none;}
 .grn-textu a:active{color:#2e9896; text-decoration:underline;}
 
-.italic-georgia{font-family:georgia,sans-serif, Arial, Helvetica; font-style:italic;}
+.italic-georgia{}
 
 h2{font-size:22px; color:#000; font-weight:bold; padding-bottom:15px; }
 h3{font-size:16px; color:#000; font-weight:bold; padding-bottom:15px; }
@@ -220,13 +220,19 @@ p{padding-bottom:15px; line-height:24px; padding-bottom:15px;}
 
 .footer .container{padding-top:15px;}
 .footer .column-l{width:45%; padding-top:14px; }
-.footer .column-r{width:45%;  text-align:right;}
-.footer .column-r span{color:#000; font-family:Calibri, Arial, Helvetica, sans-serif; font-size:12px; font-style:normal;}
+.footer .column-r{width:45%;  text-align:right; color:#6c6c6c;}
+.footer .column-r span{ font-family:Calibri, Arial, Helvetica, sans-serif; font-size:12px; font-style:normal;}
 .footer a{color:#6c6c6c; text-decoration:none;}
 .footer a:link{color:#6c6c6c; text-decoration:none;}
 .footer a:visited{color:#6c6c6c; text-decoration:none;}
 .footer a:hover{color:#2b817e; text-decoration:underline;}
 .footer a:active{color:#6c6c6c; text-decoration:none;}
+
+.footer .column-r a{color:#6c6c6c; text-decoration:none;}
+.footer .column-r a:link{color:#6c6c6c; text-decoration:none;}
+.footer .column-r a:visited{color:#6c6c6c; text-decoration:none;}
+.footer .column-r a:hover{color:#2b817e; text-decoration:underline;}
+.footer .column-r a:active{color:#6c6c6c; text-decoration:none;}
 
 .footer-links{padding-bottom:10px; text-align:center;}
 
