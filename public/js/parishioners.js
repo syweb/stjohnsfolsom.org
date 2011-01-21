@@ -255,7 +255,7 @@ function get_group_forms(div_to_append, group_id, number) {
         download_link = PARISH_URL + '/publik_file_download/' + response[i].id;
 
 
-        $(div_to_append).find('#events').append('<li><div><div class="event-title-text"><a href="' + download_link + '">' + response[i].title + '</a> for ' + response[i].class_name + '</div><div class="sptr1"></div></div>'
+        $(div_to_append).find('#events').append('<li><div><div class="event-title"><a href="' + download_link + '">' + response[i].title + '</a> for ' + response[i].class_name + '</div><div class="sptr1"></div></div>'
         + '</li>');
       });
      
