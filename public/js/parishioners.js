@@ -235,6 +235,38 @@ function get_group_events(div_to_append, group_id, number) {
 }
 
 
+function get_group_forms(div_to_append, group_id, number) {
+
+  $.ajax({
+    url: PARISH_URL + "/get_group_forms.json/" + group_id,
+    cache: false,
+    type: 'get',
+    dataType: 'jsonp',
+    success: function(response) {
+
+      
+
+      $(div_to_append).append('<div id="accordion" class="cls-events"><h4>Files and Forms</h4><ul id="events" ></ul>');
+      
+      $.each(response.reverse(), function(i, item) {
+        var dt = response[i].updated_at.replace(/T|Z/g, " ").replace(/-/g, "/");
+        
+        date_string = get_event_date(response[i].start_date, response[i].start_time, response[i].end_date, response[i].end_time);
+        download_link = PARISH_URL + '/publik_file_download/' + response[i].id;
+
+
+        $(div_to_append).find('#events').append('<li><div><div class="event-title-text"><a href="' + download_link + '">' + response[i].title + '</a> for ' + response[i].class_name + '</div><div class="sptr1"></div></div>'
+        + '</li>');
+      });
+     
+      $(div_to_append).append('</div>');
+	    //for_accordian('accordian_2');	
+    }
+  });
+
+}
+
+
 
 function get_event_date(start_date, start_time, end_date, end_time) {
   var m_names = new Array("Jan", "Feb", "Mar", 
