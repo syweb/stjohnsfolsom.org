@@ -7,19 +7,46 @@
 
 	<title>St. John The Baptist Catholic Church</title>
 	<link href="css/style.css" rel="stylesheet" type="text/css" />
-	<script type="text/javascript" src="js/jquery-1.4.2.min.js"></script>
+	<!-- Image slider Start  -->
+	<script type="text/javascript" src="js/jquery-1.2.6.min.js"></script>
+  <script type="text/javascript" src="js/date.js"></script>
+	
 	<script type="text/javascript" src="js/ministries.js"></script>
-	<!--[if IE 6]>
-	<script src="js/DD_belatedPNG_0.0.8a.js"></script>
-	<script>
-	  /* EXAMPLE */
-	  DD_belatedPNG.fix('.sptrbg1');
 
-	  /* string argument can be any CSS selector */
-	  /* .png_bg example is unnecessary */
-	  /* change it to what suits you! */
-	</script>
-	<![endif]-->
+<script type="text/javascript">
+
+function slideSwitch() {
+    var $active = $('#slideshow IMG.active');
+
+    if ( $active.length == 0 ) $active = $('#slideshow IMG:last');
+
+    // use this to pull the images in the order they appear in the markup
+    var $next =  $active.next().length ? $active.next()
+        : $('#slideshow IMG:first');
+
+    // uncomment the 3 lines below to pull the images in random order
+
+    // var $sibs  = $active.siblings();
+    // var rndNum = Math.floor(Math.random() * $sibs.length );
+    // var $next  = $( $sibs[ rndNum ] );
+
+
+    $active.addClass('last-active');
+
+    $next.css({opacity: 0.0})
+        .addClass('active')
+        .animate({opacity: 1.0}, 1000, function() {
+            $active.removeClass('active last-active');
+        });
+}
+
+$(function() {
+    setInterval( "slideSwitch()", 5000 );
+});
+
+</script>
+
+<!-- Image slider End  -->
 
 	
 </head>
@@ -37,7 +64,6 @@
 					
 					<div class="name-title-where">Where All Are Welcome</div>
 					<div class="name-title-text">Call the Parish office : (916) 985-2065</div>
-					
 				</div>
 				
 			</div>
@@ -66,60 +92,62 @@
 		<div class="contant">
 			<div class="container">
 				<div class="sptr20"></div>
-				<h2>Prayers and Devotions </h2>
+				<h2>Divine Mercy</h2>
 				<!-- incol1 start -->
 				<div class="incol1 broder1">
 					<div class="incol1-inner">
-						<div class="img-box-690-226"><img alt=" " src="images/prayer-and-devotions.jpg"/></div>
+						<div class="img-box-690-226">
+							<div id="slideshow"> 
+            				<img alt="" src="images/divinemercy.jpg" class="active"/>
+                    <img alt="" src="images/divinemercy1.jpg" />
+                    
+                </div>
+						</div>
 						
-						<p>There are several prayer groups (as listed) available to all parishioners.</p>
+						<p>Members practice trust in Jesus and mercy to others by prayer, word, and deed, and spread the teachings of Divine Mercy.  The Divine Mercy is a Roman Catholic devotion focused on the mercy of God and its power, particularly as a form of thanksgiving and entrusting of oneself to God's mercy.</p>
 						
 						
-						<h3>Cenacle Prayer Group</h3>
-						<p>Rosary, prayers and readings from Fr. Gobbi's Marian Movement of Priests. Meets in the Adoration Chapel.</p>
 						
 						<h5 >Members</h5>
 						<p>Open to all parishioners.</p>
 						
-						<h5 >Times</h5>
-						<p>Thursday evening 6-8PM </p>
+						<h5>Times and Contact Information</h5>
+						<p>See below for details</p>
 						
+						<h5 >Divine Mercy Mass</h5>
+						<p>Takes place every third Monday of the month in the Divine Mercy Chapel.  The event starts with praying of the rosary, chaplet. Confession is at 6:00 PM and Mass starts at 6:30 PM. </p>
+						
+						<h5>Works of Mercy</h5>
+						<p>Members bring food donation to the Divine Mercy Mass and distribute it the next day to the homeless at Loaves and Fishes in downtown Sacramento.  Members visit those in need of prayer, especially the sick, dying, and prisoners.  The chaplet is prayed every morning after the 8:15 AM Mass, on the first Saturday of every month in the Adoration Chapel, and then again every Thursday at the Cenacle. </p>
+						
+						<h3>Feast of the Divine Mercy</h3>
+						<p>Novena preparation and celebration of the Feast starts from Good Friday to Mercy Sunday.  Novena is led by different parish ministries followed by a presentation of their work in the parish.</p>
 							
 						<h5 >Contact</h5>
-						<p>Sally Gomez (916) 988-8162 </p>
+						<p>Pat Koelfgen (916) 989-2915, <a href="mailto:patkoelfgen@att.net">patkoelfgen@att.net</a> </p>
+						
 						<div class="sptrbg1"></div>
 						
-						<h3>Charismatic Prayer Group</h3>
-						<p>Prayer in the Adoration Chapel to praise God one-on-one as the Holy Spirit moves members.</p>
-						<h5 >Members</h5>
-						<p>Open to all parishioners.</p>
+						<h3>9 Day Novena to the Divine Mercy and rosary in homes</h3>
+						<p>An image of the Divine Mercy and Our Lady of Guadalupe are passed around to different homes to foster prayers in families.</p>
 						
-						<h5 >Times</h5>
-						<p>Monday evening 7-9 PM. </p>
+						<h5>Contact</h5>
+						<p>Nancy Leonard (916) 985-0878, 
+							<a href="mailto:nancy.l.leonard@att.net">nancy.l.leonard@att.net</a> 
+						</p>
 						
-							
-						<h5 >Contact</h5>
-						<p>Carol Bryant (916) 351-1439</p>
 						<div class="sptrbg1"></div>
 						
-						<h3>Divine Mercy Mass</h3>
+						<h3>Divine Mercy Study</h3>
+						<p>A 4-yr study also known as Faustinum Formation.  It takes place every third Monday of the month at 7 PM in the Garden Room, SJB Parish Center.</p>
+						<h5>Instructors</h5>
+						<p>Lead: Fr. Derek LaBranch<br/>
+						Alternate: Fr. Aldo Ranin</p>
 						
-						<h5 >Times</h5>
-						<p>Every third Friday at 6:30 PM.</p>
+						<h5>Contact</h5>
+						<p>Tess Poling (916) 933-5007, <a href="mailto:tesspoling@sbcglobal.net">tesspoling@sbcglobal.net</a> </p>
 						
-							
-						<h5 >Contact</h5>
-						<p>Marilyn McKenna (916) 983-5136</p>
-						<div class="sptrbg1"></div>
 						
-						<h3>Morning Prayer (Liturgy of the Hours)</h3>
-						
-						<h5 >Times</h5>
-						<p>Monday - Friday at 7:15 A.M in the Chapel.</p>
-						
-							
-						<h5 >Contact</h5>
-						<p> Parish Office (916) 985-2065</p>
 						
 						
 						
@@ -141,8 +169,8 @@
 									<li><a href="ministries-04.html">Altar Society</a></li>
 									<li><a href="ministries-05.html">Bereavement Hospitality</a></li>
 									<li><a href="ministries-07.html">Catholics for Life</a></li>
-									<li><a href="ministries-09.html">Compassionate Choir</a></li>
-									<li><a href="ministries-37.html">Divine Mercy</a></li>
+									<li><a href="ministries-09.html" >Compassionate Choir</a></li>
+									<li><a href="ministries-37.html" class="active">Divine Mercy</a></li>
 									<li><a href="ministries-10.html">Family Fellowship</a></li>
 									<li><a href="ministries-11.html">Gift Shop</a></li>
 									<li><a href="ministries-12.html">Greeters</a></li>
@@ -155,7 +183,7 @@
 									<li><a href="ministries-19.html">Pastoral Care</a></li>
 									<li><a href="ministries-20.html">Pastoral Council</a></li>
 									<li><a href="ministries-22.html">Prayer Shawl </a></li>
-									<li><a href="ministries-21.html" class="active">Prayers and Devotions</a></li>
+									<li><a href="ministries-21.html">Prayers and Devotions</a></li>
 									<li><a href="ministries-25.html">RCIA</a></li>
 									<li><a href="ministries-06.html">Scripture Study</a></li>
 									<li><a href="ministries-26.html">Senior Visitation </a></li>

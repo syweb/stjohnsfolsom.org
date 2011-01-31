@@ -7,8 +7,46 @@
 
 	<title>St. John The Baptist Catholic Church</title>
 	<link href="css/style.css" rel="stylesheet" type="text/css" />
-	<script type="text/javascript" src="js/jquery-1.4.2.min.js"></script>
+	<!-- Image slider Start  -->
+	<script type="text/javascript" src="js/jquery-1.2.6.min.js"></script>
+  <script type="text/javascript" src="js/date.js"></script>
+	
 	<script type="text/javascript" src="js/ministries.js"></script>
+
+<script type="text/javascript">
+
+function slideSwitch() {
+    var $active = $('#slideshow IMG.active');
+
+    if ( $active.length == 0 ) $active = $('#slideshow IMG:last');
+
+    // use this to pull the images in the order they appear in the markup
+    var $next =  $active.next().length ? $active.next()
+        : $('#slideshow IMG:first');
+
+    // uncomment the 3 lines below to pull the images in random order
+
+    // var $sibs  = $active.siblings();
+    // var rndNum = Math.floor(Math.random() * $sibs.length );
+    // var $next  = $( $sibs[ rndNum ] );
+
+
+    $active.addClass('last-active');
+
+    $next.css({opacity: 0.0})
+        .addClass('active')
+        .animate({opacity: 1.0}, 1000, function() {
+            $active.removeClass('active last-active');
+        });
+}
+
+$(function() {
+    setInterval( "slideSwitch()", 5000 );
+});
+
+</script>
+
+<!-- Image slider End  -->
 
 	
 </head>
@@ -58,7 +96,13 @@
 				<!-- incol1 start -->
 				<div class="incol1 broder1">
 					<div class="incol1-inner">
-						<div class="img-box-690-226"><img alt=" " src="images/ministries.jpg"/></div>
+						<div class="img-box-690-226">
+							<div id="slideshow"> 
+            				<img alt="" src="images/choir1.jpg" class="active"/>
+                    <img alt="" src="images/choir2.jpg" />
+                    
+                </div>
+						</div>
 						
 						<p>On request provides music at funerals.</p>
 						
@@ -92,6 +136,7 @@
 									<li><a href="ministries-05.html">Bereavement Hospitality</a></li>
 									<li><a href="ministries-07.html">Catholics for Life</a></li>
 									<li><a href="ministries-09.html" class="active">Compassionate Choir</a></li>
+									<li><a href="ministries-37.html">Divine Mercy</a></li>
 									<li><a href="ministries-10.html">Family Fellowship</a></li>
 									<li><a href="ministries-11.html">Gift Shop</a></li>
 									<li><a href="ministries-12.html">Greeters</a></li>
