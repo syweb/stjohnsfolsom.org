@@ -20,6 +20,47 @@ $(function(){
 	});
 })
 
+function for_accordian(accordian_no){
+	
+	accordian_no = '.'+accordian_no + ' ';
+	
+	//Accordian Start
+	$(accordian_no + '.event-dtail').css({ display:"none"});
+	$(accordian_no + '.event-dtail:first').css({ display:"block"});
+	$(accordian_no + '.event-title:first').addClass('ui-state-active');
+	
+	
+	$(accordian_no + '.event-title').click(function(){
+			if($(this).attr("class").match(/ui-state-active/) == 'ui-state-active'){
+				
+			}
+			else{
+				$(accordian_no + '.event-dtail').slideUp("slow");
+				$(accordian_no + '.event-title').removeClass('ui-state-active');
+				
+				$(this).next().slideDown("slow");
+				$(this).addClass('ui-state-active');
+			}
+			
+		});
+
+
+	$(accordian_no + ' .event-list .event-title').click(function(){
+			if($(this).attr("class").match(/ui-state-active/) == 'ui-state-active'){
+
+			}
+			else{
+				$(accordian_no + '.event-list .event-dtail').slideUp("slow");
+				$(accordian_no + '.event-list .event-title').removeClass('ui-state-active');
+
+				$(this).next().slideDown("slow");
+				$(this).addClass('ui-state-active');
+			}
+
+		});
+	//Accordian End
+}
+
 
 function get_current_ministry_announcements(div_to_append, class_id, number){
 
@@ -111,4 +152,17 @@ function get_current_ministry_events(div_to_append, group_id, number) {
     }
   });
 
+}
+
+function get_event_date(start_date, start_time, end_date, end_time) {
+  var m_names = new Array("Jan", "Feb", "Mar", 
+  "Apr", "May", "Jun", "Jul", "Aug", "Sep", 
+  "Oct", "Nov", "Dec");
+
+  var d = new Date(start_date);
+  var curr_date = d.getDate();
+  var curr_month = d.getMonth();
+  var curr_year = d.getFullYear();
+
+  return m_names[curr_month] + ' ' + curr_date;
 }
