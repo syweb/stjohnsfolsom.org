@@ -1,7 +1,7 @@
 set :repository,  "git@github.com:syweb/stjohnsfolsom.org.git"
 set :user,        "sites"
 set :domain,      "#{user}@insightmethods.com"
-set :deploy_to,   "/home/sites/stjohnfolsom.org/test"
+set :deploy_to,   "/home/sites/stjohnfolsom.org/current/public/test"
 
 
 
