@@ -211,24 +211,24 @@ function get_group_events(div_to_append, group_id, number) {
         if (response[i].description == 'NA') {
           detail = '<div class="event-dtail">'; //'<span id="' + event_link + '"></span></div>';
         } else {
-          detail = '<div class="event-dtail"><br/>' + response[i].description + '</div>'; //<span id="' + event_link + '"></span>';
+          detail = '<div class="event-dtail"><br/>' + response[i].description + '<span id="' + event_link + '"></span></div>'; //<span id="' + event_link + '"></span>';
         }
 
         if (i < number) {
           $(div_to_append).find('#events').append('<li><div class="event-title "><div class="date">' + date_string + '</div><div class="event-title-text"><a>' + response[i].title + '</a></div><div class="sptr1"></div></div>'
-          + detail
-          + '</li>');
+          + detail);
+
+          if (response[i].has_downloads == true) {
+            download_link = PARISH_URL + '/publik/download/' + response[i].id;
+            $(div_to_append).find('#'+event_link).append('<br/><br/><a href="' + download_link + '">Download Attachment</a>');
+          }
+
         }
 
-        if (response[i].has_downloads == true) {
-          download_link = PARISH_URL + '/publik/download/' + response[i].id;
-          $(div_to_append).find('#'+event_link).append('<br/><a href="' + download_link + '">Download Attachment</a>');
-        }
-				
       });
      
-      $(div_to_append).append('</div>');
-	  for_accordian('accordian_2');	
+      //$(div_to_append).append('</div>');
+	    for_accordian('accordian_2');	
     }
   });
 
