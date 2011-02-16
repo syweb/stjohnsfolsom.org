@@ -235,7 +235,7 @@ function get_group_events(div_to_append, group_id, number) {
 }
 
 
-function get_group_forms(div_to_append, group_id, number) {
+function get_group_forms(div_to_append, group_id, group_name, number) {
 
   $.ajax({
     url: PARISH_URL + "/get_group_forms.json/" + group_id,
@@ -246,7 +246,7 @@ function get_group_forms(div_to_append, group_id, number) {
 
       
 
-      $(div_to_append).append('<div id="accordion" class="cls-events"><h4>Files and Forms</h4><ul id="events" ></ul>');
+      $(div_to_append).append('<div id="accordion" class="cls-events"><div class="box-title">&nbsp;&nbsp;&nbsp;<em>' + group_name + '</em></div><ul id="events" ></ul>');
       
       $.each(response.reverse(), function(i, item) {
         var dt = response[i].updated_at.replace(/T|Z/g, " ").replace(/-/g, "/");
@@ -255,7 +255,7 @@ function get_group_forms(div_to_append, group_id, number) {
         download_link = PARISH_URL + '/publik_file_download/' + response[i].id;
 
 
-        $(div_to_append).find('#events').append('<li><div><div class="event-title"><a href="' + download_link + '">' + response[i].title + '</a> for ' + response[i].class_name + '</div><div class="sptr1"></div></div>'
+        $(div_to_append).find('#events').append('<li><div><div class="event-title"><a href="' + download_link + '">' + response[i].title + '</a>' + '</div><div class="sptr1"></div></div>'
         + '</li>');
       });
      
