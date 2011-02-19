@@ -11,14 +11,16 @@
 	<!-- Image slider Start  -->
 	<script type="text/javascript" src="js/jquery-1.4.2.min.js"></script>
 	<script type="text/javascript" src="js/jquery-ui-1.8.4.custom.min.js"></script>
-	<script type="text/javascript" src="js/parishioners.js"></script>
+	<script type="text/javascript" src="js/parishioners_new.js"></script>
 
 	<script type="text/javascript">
 
   $(document).ready(function() {
-    get_group_bulletins("#group_bulletins", "1123", 3);
-    get_group_announcements("#group_announcements", "1116");
-    get_group_events("#group_events", "1116");
+    // get_group_bulletins("#group_bulletins", "1123", 3);
+    get_group_bulletins("#group_bulletins", "1123", "title", "asc",3);
+    get_group_announcements("#group_announcements", "1116", "title", "asc", 30);
+    get_group_events("#group_events", "1116", "start_date", "asc");
+    
 	});
 
 	</script>
