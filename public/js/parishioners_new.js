@@ -1,6 +1,5 @@
 var PARISH_URL = 'https://stjohnfolsom.schoolyardapp.com';
-//var PARISH_URL = 'http://stjohnfolsom.local-sy.com:4000';
-var PARISH_URL_UPDATE = 'http://stjohnfolsom.test-schoolyardapp.info';
+var PARISH_URL_UPDATE = 'http://stjohnfolsom.schoolyardapp.com';
 
 $(document).ready(function() {
   
