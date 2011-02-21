@@ -48,11 +48,10 @@
 	<script type="text/javascript" src="js/parishioners.js"></script>
 	<script type="text/javascript">
 
-  $(document).ready(function() {
-    get_group_bulletins("#group_bulletins", "1123", 3);
-    get_group_announcements("#group_announcements", "1116");
-    get_group_events("#group_events", "1116");
-	});
+    $(document).ready(function() {
+      get_group_announcements("#group_announcements", "1113", "title", "asc");
+      get_group_events("#group_events", "1113", "start_date", "asc");
+    });
 
 	</script>
 
@@ -137,7 +136,8 @@
 						<p>Second Wednesday of the month at 7pm September through May</p>
 						
 						<h5>Contact</h5>
-						<p>Joanne McShane  (916) 983-3854, <a href="mailto:joannetmcshane@gmail.com">joannetmcshane@gmail.com</a> and <br/> Cheryl Garcia at (916) 984-0175, <a href="mailto:Cheryl@Garcias.org">Cheryl@Garcias.org</a></p>
+						<p>Joanne McShane  (916) 983-3854, <a href="mailto:joannetmcshane@gmail.com">joannetmcshane@gmail.com</a> and <br/>
+Cheryl Garcia at (916) 984-0175, <a href="mailto:Cheryl@Garcias.org">Cheryl@Garcias.org</a></p>
 							
 						
 					</div>
@@ -149,11 +149,11 @@
 					
 					<div class="event-list accordian_2">
 						<div id='group_events' class='group_events' > </div>
-						<div class="event-box-sptr"></div>
+<!--						<div class="event-box-sptr"></div>-->
 					</div>
 					<div class="announcements accordian_1">
 						<div id='group_announcements' class='group_announcements' > </div>	
-						<div class="event-box-sptr"></div>
+<!--						<div class="event-box-sptr"></div>-->
 					</div>
 					
 				</div>

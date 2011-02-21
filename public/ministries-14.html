@@ -14,10 +14,10 @@
 	<script type="text/javascript" src="js/ministries.js"></script>
 
 	<script type="text/javascript">
-  $(document).ready(function() {
-    get_group_announcements("#group_announcements", "1015");
-    get_group_events("#group_events", "1015");
-  });
+    $(document).ready(function() {
+      get_group_announcements("#group_announcements", "1099", "title", "asc");
+      get_group_events("#group_events", "1099", "start_date", "asc");
+    });
 
 
 	</script>
@@ -123,11 +123,11 @@
 					<!-- event box start -->
 					<div class="event-list accordian_2">
 						<div id='group_events' class='group_events' > </div>
-						<div class="event-box-sptr"></div>
+<!--						<div class="event-box-sptr"></div>-->
 					</div>	
 					<div class="announcements accordian_1">	
 						<div id='group_announcements' class='group_announcements' > </div>
-						<div class="event-box-sptr"></div>
+<!--						<div class="event-box-sptr"></div>-->
 					</div>		
 					<!-- event box end -->
 					
