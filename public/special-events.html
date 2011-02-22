@@ -82,12 +82,14 @@
 		  /* change it to what suits you! */
 		</script>
 		<![endif]-->
+		
+  	<script type="text/javascript" src="js/ministries.js"></script>
 	
 		<script type="text/javascript" src="js/parishioners.js"></script>
 		<script type="text/javascript">
 
     $(document).ready(function() {
-      get_group_events("#group_events", "1164");
+      get_group_events("#group_events", "1164", "start_date", "asc");
   	});
 
   	</script>
@@ -182,10 +184,9 @@
 				<!-- incol2 start -->
 				<div class="incol2 ">
 
-
-					<div id='group_events' class='group_events' > </div>
-
-
+          <div class="event-list accordian_2">
+            <div id='group_events' class='group_events' > </div>
+					</div>
 					
 				</div>
 				<!-- incol2 end -->
