@@ -1,4 +1,5 @@
 var PARISH_URL = 'https://stjohnfolsom.schoolyardapp.com';
+// var PARISH_URL = 'http://stjohnfolsom.test-schoolyardapp.info';
 
 $(document).ready(function() {
 
@@ -100,6 +101,14 @@ function get_events(div_to_append) {
 
 // function get_group_bulletins(div_to_append, group_id, number) {
 function get_group_bulletins(div_to_append, group_id, sort_by_field, order_by_value, number) {
+  
+  if (typeof sort_by_field  == "undefined"){
+    sort_by_field = "title";
+  }
+  
+  if (typeof order_by_value == "undefined"){
+    order_by_value = "asc";
+  }
 
   if (typeof number == "undefined") {
       number = 6;
@@ -141,6 +150,14 @@ function get_group_bulletins(div_to_append, group_id, sort_by_field, order_by_va
 
 
 function get_group_announcements(div_to_append, group_id, sort_by_field, order_by_value, number) {
+  
+  if (typeof sort_by_field  == "undefined"){
+    sort_by_field = "title";
+  }
+  
+  if (typeof order_by_value == "undefined"){
+    order_by_value = "asc";
+  }
 
   if (typeof number == "undefined") {
       number = 6;
@@ -185,6 +202,14 @@ function get_group_announcements(div_to_append, group_id, sort_by_field, order_b
 
 
 function get_group_events(div_to_append, group_id, sort_by_field, order_by_value, number) {
+  
+  if (typeof sort_by_field  == "undefined"){
+    sort_by_field = "title";
+  }
+  
+  if (typeof order_by_value == "undefined"){
+    order_by_value = "asc";
+  }
 
   if (typeof number == "undefined") {
       number = 6;

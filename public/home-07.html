@@ -13,8 +13,8 @@
 
 	<script type="text/javascript">
   $(document).ready(function() {
-    get_group_announcements("#group_announcements", "1121");
-    get_group_events("#group_events", "1121");
+    get_group_announcements("#group_announcements", "1121", "title", "asc");
+    get_group_events("#group_events", "1121", "start_date", "asc");
   });
 
 
@@ -186,10 +186,14 @@
 					<div class="event-box-sptr"></div>	
 					<div class="sptr20"></div>
 					<!-- event box start -->
-					<div id='group_events' class='group_events' > </div>
-					<div class="event-box-sptr"></div>	
-					<div id='group_announcements' class='group_announcements' > </div>
-					<div class="event-box-sptr"></div>	
+					<div class="event-list accordian_2">
+					  <div id='group_events' class='group_events' > </div>
+          </div>
+          <!-- <div class="event-box-sptr"></div>  -->
+          <div class="announcements accordian_1">
+            <div id='group_announcements' class='group_announcements' > </div>
+					</div>
+          <!-- <div class="event-box-sptr"></div>  -->
 					<!-- event box end -->
 				</div>
 				<!-- incol2 end -->
