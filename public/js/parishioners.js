@@ -1,5 +1,5 @@
 var PARISH_URL = 'https://stjohnfolsom.schoolyardapp.com';
-PARISH_URL = 'http://stjohnfolsom.local-sy.com:4000';
+//PARISH_URL = 'http://stjohnfolsom.local-sy.com:4000';
 
 
 function for_accordian(accordian_no){
