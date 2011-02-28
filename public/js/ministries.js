@@ -1,4 +1,5 @@
 var PARISH_URL = 'http://stjohnfolsom.test-schoolyardapp.info/';
+var PARISH_URL = 'http://stjohnfolsom.local-sy.com:4000/';
 
 //ministries quick view
 $(function(){
