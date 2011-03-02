@@ -1,12 +1,12 @@
 set :application, "stjohnfolsom.org"
-set :repository,  "git@github.com:syweb/#{application}.git"
+set :repository,  "git@github.com:syweb/stjohnsfolsom.org.git"
 set :user,        "sites"
 set :domain,      "#{user}@insightmethods.com"
 set :deploy_to,   "/home/sites/#{application}/current/public/test"
-set :revision,    "origin/master"
+set :revision,    "origin/deploy_change"
 
 
 desc "this is for production"
 task :production do
-  set :deploy_to,   "/home/sites/stjohnfolsom.org"
+  set :deploy_to,   "/home/sites/#{application}"
 end
