@@ -3,7 +3,7 @@ set :repository,  "git@github.com:syweb/stjohnsfolsom.org.git"
 set :user,        "sites"
 set :domain,      "#{user}@insightmethods.com"
 set :deploy_to,   "/home/sites/#{application}/current/public/test"
-set :revision,    "origin/deploy_change"
+set :revision,    "origin/master"
 
 
 desc "this is for production"
