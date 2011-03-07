@@ -1,17 +1,4 @@
 var PARISH_URL = 'https://stjohnfolsom.schoolyardapp.com';
-// var PARISH_URL = 'http://stjohnfolsom.test-schoolyardapp.info';
-
-$(document).ready(function() {
-
-  //get_announcements("#announcements");
-  //get_events("#events");
-
-  //get_group_announcements("#group_announcements", "1012");
-  //get_group_events("#group_events", "1012");
-
-  //get_group_announcements("#group_announcements", "101233");
-  //get_group_events("#group_events", "101233");
-});
 
 function for_accordian(accordian_no){
 
@@ -201,7 +188,7 @@ function get_group_announcements(div_to_append, group_id, sort_by_field, order_b
 
 
 
-function get_group_events(div_to_append, group_id, sort_by_field, order_by_value, number) {
+function get_group_events(div_to_append, group_id, sort_by_field, order_by_value, number, group_name) {
   
   if (typeof sort_by_field  == "undefined"){
     sort_by_field = "title";
@@ -214,6 +201,11 @@ function get_group_events(div_to_append, group_id, sort_by_field, order_by_value
   if (typeof number == "undefined") {
       number = 6;
   }
+  
+  if (typeof group_name == "undefined") {
+      group_name = "Upcoming Events";
+  }
+ 
 
   $.ajax({
     url: PARISH_URL + "/get_group_events.json/" + group_id + "/"+ sort_by_field + "/" + order_by_value,
@@ -222,7 +214,7 @@ function get_group_events(div_to_append, group_id, sort_by_field, order_by_value
     dataType: 'jsonp',
     success: function(response) {
         if (response != ""){
-          $(div_to_append).append('<div id="accordion" class="cls-events"><h4>Special Upcoming Events</h4><ul id="events" ></ul>');
+          $(div_to_append).append('<div id="accordion" class="cls-events"><h4>' + group_name + '</h4><ul id="events" ></ul>');
         }
 
       // $.each(response.reverse(), function(i, item) {
@@ -236,20 +228,22 @@ function get_group_events(div_to_append, group_id, sort_by_field, order_by_value
 
         detail = '';
         if (response[i].description == 'NA') {
-          detail = '<div class="event-dtail">'; //'<span id="' + event_link + '"></span></div>';
+          detail = '<div class="event-dtail"><span id="' + event_link + '"></span></div>';
         } else {
-          detail = '<div class="event-dtail"><br/>' + response[i].description + '</div>'; //<span id="' + event_link + '"></span>';
+          detail = '<div class="event-dtail"><br/>' + response[i].description + '<span id="' + event_link + '"></span></div>';
         }
 
         if (i < number) {
           $(div_to_append).find('#events').append('<li><div class="event-title "><div class="date">' + date_string + '</div><div class="event-title-text"><a>' + response[i].title + '</a></div><div class="sptr1"></div></div>'
           + detail
           + '</li>');
-        }
 
-        if (response[i].has_downloads == true) {
-          download_link = PARISH_URL + '/publik/download/' + response[i].id;
-          $(div_to_append).find('#'+event_link).append('<br/><a href="' + download_link + '">Download Attachment</a>');
+          if (response[i].has_downloads == true) {
+            download_link = PARISH_URL + '/publik/download/' + response[i].id;
+            $(div_to_append).find('#'+event_link).append('<br/><a href="' + download_link + '">Download Attachment</a>');
+          }
+
+
         }
 
       });

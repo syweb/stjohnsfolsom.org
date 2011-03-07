@@ -17,9 +17,9 @@
 
   $(document).ready(function() {
     // get_group_bulletins("#group_bulletins", "1123", 3);
-    get_group_bulletins("#group_bulletins", "1123", "title", "asc",3);
+    get_group_bulletins("#group_bulletins", "1123", "updated_at", "desc", 3);
     get_group_announcements("#group_announcements", "1116", "title", "asc", 30);
-    get_group_events("#group_events", "1116", "start_date", "asc");
+    get_group_events("#group_events", "1116", "start_date", "asc", 6, "Special Upcoming Events");
     
 	});
 
