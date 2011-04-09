@@ -361,8 +361,10 @@ p{padding-bottom:15px; line-height:24px; padding-bottom:15px;}
 
 .indented{padding:10px 20px;}
 
+
 /* event-box 22-Nov-2010 */
 .event-dtail,.event-dtail a{word-wrap: break-word;}
+.event-dtail img{.width:98%; max-width:98%; margin:5px 0;}
 .event-box{padding:1px;   font-size:14px; border:1px solid #ccc;   background:#fff;  }
 .event-box div{margin-bottom:1px;}
 .event-box .box-title{padding:8px;  color:#fff; background:#116362;}
