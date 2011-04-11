@@ -7,8 +7,40 @@
 
 	<title>St. John The Baptist Catholic Church</title>
 	<link href="css/style.css" rel="stylesheet" type="text/css" />
-	<script type="text/javascript" src="/js/jquery-1.4.2.min.js"></script>
-	<script type="text/javascript" src="/js/ministries.js"></script>
+	<script type="text/javascript" src="js/jquery-1.4.2.min.js"></script>
+	<script type="text/javascript" src="js/ministries.js"></script>
+	<script type="text/javascript">
+
+	function slideSwitch() {
+	    var $active = $('#slideshow IMG.active');
+
+	    if ( $active.length == 0 ) $active = $('#slideshow IMG:last');
+
+	    // use this to pull the images in the order they appear in the markup
+	    var $next =  $active.next().length ? $active.next()
+	        : $('#slideshow IMG:first');
+
+	    // uncomment the 3 lines below to pull the images in random order
+
+	    // var $sibs  = $active.siblings();
+	    // var rndNum = Math.floor(Math.random() * $sibs.length );
+	    // var $next  = $( $sibs[ rndNum ] );
+
+
+	    $active.addClass('last-active');
+
+	    $next.css({opacity: 0.0})
+	        .addClass('active')
+	        .animate({opacity: 1.0}, 1000, function() {
+	            $active.removeClass('active last-active');
+	        });
+	}
+
+	$(function() {
+	    setInterval( "slideSwitch()", 5000 );
+	});
+
+	</script>
 
 	<script type="text/javascript" src="/js/parishioners.js"></script>
 
@@ -81,7 +113,16 @@
 				<!-- incol1 start -->
 				<div class="incol1 broder1">
 					<div class="incol1-inner">
-						<div class="img-box-690-226"><img alt=" " src="images/youth-miinistry.jpg"/></div>
+						<div class="img-box-690-226">
+             	<div id="slideshow"> 
+          				<img alt="" src="images/youth-ministry1.jpg" class="active"/>
+                  <img alt="" src="images/youth-ministry2.jpg" />
+                  <img alt="" src="images/youth-ministry3.jpg" />
+  								<img alt="" src="images/youth-ministry4.jpg" />
+  								<img alt="" src="images/youth-ministry5.jpg" />
+  								
+              </div>
+            </div>
 						<p>St. John the Baptist is proud to offer two vibrant youth ministries for our High School and Middle School Age Youth. Life Teen is a Youth Ministry offered for all High School Age Students grades 9-12. Edge is a Youth Ministry offered for all Middle School Students grades 6th-8th.</p>
 						<p>The goal of Life Teen and Edge is to lead teens closer to Christ. Through Youth Meetings known as Life Nights and Edge Nights, our Youth Minister and His Core team work closely with the youth with the hope that they will begin to see or continue to build their relationship with Christ, through the beauty of the Church.</p>
 						<p>Life Nights and Edge Nights consist of various games, activities, trips, retreats, presentations and small group discussion.  Life Teen and Edge offer our youth a fun and loving community partnered with relevant and practical church teachings.</p>
