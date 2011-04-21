@@ -90,6 +90,7 @@
 
     $(document).ready(function() {
       get_group_events("#group_events", "1164", "start_date", "asc", 10, "Special Upcoming Events");
+      get_group_announcements("#group_announcements", "1116", "title", "asc", 30);
       //get_group_events("#group_events", "1116", "start_date", "asc", 6, "Special Upcoming Events");
   	});
 
@@ -166,17 +167,11 @@
                 </div>
             </div>
 						
-						<!-- Special Event Detail Start -->
-						<!--<div class="special-event-detail">
-							<h5>Ordinary Time</h5>
-							<div class="sptr20"></div>
-							<p>The rhythm of the liturgical seasons reflects the rhythm of life — with its celebrations of anniversaries and its seasons of quiet growth and maturing. </p>
-							<p>Ordinary Time, meaning ordered or numbered time, is celebrated in two segments: from the Monday following the Baptism of Our Lord up to Ash Wednesday; and from Pentecost Monday to the First Sunday of Advent. This makes it the largest season of the Liturgical Year. </p>
-							<p>Vestments are usually green; the color of hope and growth, the Church counts the thirty-three or thirty-four Sundays of Ordinary Time, inviting her children to meditate upon the whole mystery of Christ – his life, miracles and teachings – in the light of his Resurrection. </p>
-							<p>If the faithful are to mature in the spiritual life and increase in faith, they must descend the great mountain peaks of Easter and Christmas in order to "pasture" in the vast verdant meadows of tempus per annum, or Ordinary Time. </p>
-							<p>Sunday by Sunday, the Pilgrim Church marks her journey through the tempus per annum as she processes through time toward eternity.</p>
-							<p><a href="http://www.nccbuscc.org/liturgy/current/2011cal.pdf ">2011 Liturgical Calendar</a></p>
-						</div>-->	
+						<div class="event-list accordian_2">
+              <div id='group_events' class='group_events' > </div>
+  					</div>
+            
+						
 						<div class="sptr1"></div>
 						<!-- Special Event Detail End -->
 						
@@ -189,8 +184,9 @@
 				<!-- incol2 start -->
 				<div class="incol2 ">
 
-          <div class="event-list accordian_2">
-            <div id='group_events' class='group_events' > </div>
+					<div class="announcements accordian_1">
+						<div id='group_announcements' class='group_announcements' > </div>	
+            <!--<div class="event-box-sptr"></div>-->
 					</div>
 					
 				</div>
