@@ -446,3 +446,17 @@ h5 a:active{color:#000; text-decoration:none;}
 .quick-mini-col-big .li-title{margin-left:15px;}
 
 
+/*-- special-event-content special event page  --*/
+.special-event-content h4{color: #000000; font-size: 16px; font-weight: bold; padding-bottom: 15px; background:none;}
+.special-event-content #accordion{border:none;}
+.special-event-content ul,
+.special-event-content .event-box-sptr, 
+.special-event-content ul .event-title .date,
+.special-event-content ul .event-dtail,
+.special-event-content ul .event-title{background:none; border:none;} 
+
+.special-event-content ul .event-title .date{text-align:center; font-weight:bold; font-family:Calibri, Arial, Helvetica, sans-serif; background:#2E9896; color:#fff; line-height:18px; padding:5px 5px 0px 5px; margin-right:10px;}
+.special-event-content ul .event-title .event-title-text{width:500px;  font-weight:bold; padding-top:6px;}
+.special-event-content ul .event-title .event-title-text a{color:#3B3B3B; }
+.special-event-content ul .event-dtail{padding:0 4px 40px 4px;  line-height:24px;}
+.special-event-content ul .event-dtail br{display:none;}
