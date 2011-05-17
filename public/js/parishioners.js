@@ -124,7 +124,7 @@ function get_home_page_announcements(div_to_append, sort_by_field, order_by_valu
 
 function show_announcement(response, div_to_append, number) {
   if (response != ""){
-       $(div_to_append).append('<div id="accordion" class="event-box"><div class="box-title"><h3>Announcements</h3></div></div>');
+       $(div_to_append).append('<div id="accordion" class="event-box"><div class="box-title">Announcements</div></div>');
   }
 
   $.each(response, function(i, item) {
@@ -134,7 +134,7 @@ function show_announcement(response, div_to_append, number) {
 
     if (i < number) {
 
-      $(div_to_append).find('.event-box').append('<div class="event-title "><strong>' + response[i].title + '</strong></div>');
+      $(div_to_append).find('.event-box').append('<div class="event-title "><a>' + response[i].title + '</a></div>');
       $(div_to_append).find('.event-box').append('<div class="event-dtail ">' + response[i].content + '<span id="' + event_link + '"></span></div>');
 
       if (response[i].has_downloads == true) {
@@ -194,7 +194,7 @@ function get_home_page_events(div_to_append, sort_by_field, order_by_value, numb
 
 function show_event(response, div_to_append, number, group_name) {
   if (response != ""){
-    $(div_to_append).append('<div id="accordion" class="cls-events"><h3>' + group_name + '</h3><ul id="events" ></ul>');
+    $(div_to_append).append('<div id="accordion" class="cls-events"><h4>' + group_name + '</h4><ul id="events" ></ul>');
   }
 
   $.each(response, function(i, item) {
@@ -206,7 +206,7 @@ function show_event(response, div_to_append, number, group_name) {
     if (response[i].description == 'NA') {
       detail = '<div class="event-dtail"><span id="' + event_link + '"></span></div>';
     } else {
-      detail = '<div class="event-dtail"><br/>' + response[i].description + '<span id="' + event_link + '"></span></div>';
+      detail = '<div class="event-dtail">' + response[i].description + '<span id="' + event_link + '"></span></div>';
     }
 
     if (i < number) {
