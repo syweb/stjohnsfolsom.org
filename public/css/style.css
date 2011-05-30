@@ -289,7 +289,7 @@ p{padding-bottom:15px; line-height:24px; padding-bottom:15px;}
 
 
 
-.cls-events h4{height:35px; background:url(../images/bg-upcoming-title.gif) repeat-x; padding-left:10px; color:#fff; font-size:16px; line-height:30px; padding-bottom:0px; font-weight:normal;}
+.cls-events h4{height:32px; background:#116362; padding-left:10px; color:#fff; font-size:16px; line-height:32px; padding-bottom:0px; font-weight:normal; font-size:14px; border:1px solid #fff;} /*url(../images/bg-upcoming-title.gif) repeat-x*/
 .cls-events ul{border:1px solid #bdbcbd; background:#fff url(../images/bg-upcomeing-box.gif) bottom repeat-x;  }
 
 .cls-events ul .event-title {background:#f6f6f6; border:1px solid #eee; margin-bottom:1px; padding:4px; cursor:pointer;}
@@ -447,7 +447,7 @@ h5 a:active{color:#000; text-decoration:none;}
 
 
 /*-- special-event-content special event page  --*/
-.special-event-content h4{color: #000000; font-size: 16px; font-weight: bold; padding-bottom: 15px; background:none;}
+.special-event-content h4{color: #000000; font-size: 16px; font-weight: bold; padding-bottom: 15px; background:none; border:none;}
 .special-event-content #accordion{border:none;}
 .special-event-content ul,
 .special-event-content .event-box-sptr, 
