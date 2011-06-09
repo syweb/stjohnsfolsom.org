@@ -119,6 +119,8 @@ p{padding-bottom:15px; line-height:24px; padding-bottom:15px;}
 
 /*-- header-full --*/
 .header-full{height:116px; background: url(../images/bg-topheader.gif) repeat-x; line-height:normal;} 
+.header-full .container{position:relative;}
+
 .logo{position:absolute; top:0; left:-50px; height:116px; width:229px;}
 .name-title{position:absolute; top:26px; left:142px; width:755px; height:85px; }
 .name-title-img{height:40px;}
@@ -468,4 +470,7 @@ h5 a:active{color:#000; text-decoration:none;}
 .staff-dd a:visited;{color:#666; text-decoration:none;}
 .staff-dd a:hover{color:#2E9896; text-decoration:none;}
 .staff-dd a:active{color:#666; text-decoration:none;}
+
+#event-icon{position:absolute; height:62px; width:128px; top:70px; left:460px; z-index:10;  }
+
 

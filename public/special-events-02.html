@@ -10,7 +10,10 @@
     
     <!-- Image slider Start  -->
 	<script type="text/javascript" src="js/jquery-1.2.6.min.js"></script>
-     <script type="text/javascript" src="js/date.js"></script>
+  <script type="text/javascript" src="js/date.js"></script>
+  
+
+  <script type="text/javascript" src="js/parishioners.js"></script>
 
 	<script type="text/javascript">
 
@@ -50,6 +53,9 @@
     <script type="text/javascript">
 		
       jQuery(document).ready(function(){
+      
+      get_event_icon()
+   
 		var dates = [],
 			today = Date.today(),
 			id = 0;
