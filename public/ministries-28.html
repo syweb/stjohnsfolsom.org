@@ -12,8 +12,40 @@
 	<link href="css/style.css" rel="stylesheet" type="text/css" />
 	<script type="text/javascript" src="js/jquery-1.4.2.min.js"></script>
 	<script type="text/javascript" src="js/ministries.js"></script>
-	
 	<script type="text/javascript" src="js/parishioners.js"></script>
+	
+	<script type="text/javascript">
+
+	function slideSwitch() {
+	    var $active = $('#slideshow IMG.active');
+
+	    if ( $active.length == 0 ) $active = $('#slideshow IMG:last');
+
+	    // use this to pull the images in the order they appear in the markup
+	    var $next =  $active.next().length ? $active.next()
+	        : $('#slideshow IMG:first');
+
+	    // uncomment the 3 lines below to pull the images in random order
+
+	    // var $sibs  = $active.siblings();
+	    // var rndNum = Math.floor(Math.random() * $sibs.length );
+	    // var $next  = $( $sibs[ rndNum ] );
+
+
+	    $active.addClass('last-active');
+
+	    $next.css({opacity: 0.0})
+	        .addClass('active')
+	        .animate({opacity: 1.0}, 1000, function() {
+	            $active.removeClass('active last-active');
+	        });
+	}
+
+	$(function() {
+	    setInterval( "slideSwitch()", 5000 );
+	});
+
+	</script>
 	<script type="text/javascript">
 
     $(document).ready(function() {
@@ -85,7 +117,14 @@
 				<!-- incol1 start -->
 				<div class="incol1 broder1">
 					<div class="incol1-inner">
-						<div class="img-box-690-226"><img alt=" " src="images/St-vincent-de-paul.jpg"/></div>
+						<div class="img-box-690-226">
+						  <div id="slideshow"> 
+                    <img alt="" src="images/St-vincent-de-paul1.jpg" class="active" />
+                    <img alt="" src="images/St-vincent-de-paul2.jpg" />
+                    <img alt="" src="images/St-vincent-de-paul3.jpg" />
+                    <img alt="" src="images/St-vincent-de-paul4.jpg" />
+              </div>
+						</div>
 						<img src="images/ministries-28.jpg" alt="" class="img-border">
 						<p>Dedicated to feeding and clothing the poor. Accepts food, material, and monetary donations.</p>
 							
