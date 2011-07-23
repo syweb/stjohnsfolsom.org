@@ -61,6 +61,8 @@ function get_group_bulletins(div_to_append, group_id, sort_by_field, order_by_va
       }
 
       $.each(response, function(i, item) {
+        response[i] = response[i].announcement;
+        
         var dt = response[i].updated_at.replace(/T|Z/g, " ").replace(/-/g, "/");
 
         var event_link = 'event-link-' + response[i].id;
