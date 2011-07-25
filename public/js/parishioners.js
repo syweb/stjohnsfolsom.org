@@ -276,6 +276,8 @@ function show_form(response, div_to_append, group_id, group_name, number) {
   $(div_to_append).append('<div id="accordion" class="cls-events"><div class="box-title">&nbsp;&nbsp;&nbsp;<em>' + group_name + '</em></div><ul id="events" ></ul>');
 
   $.each(response.reverse(), function(i, item) {
+    response[i] = response[i].form;
+    
     var dt = response[i].updated_at.replace(/T|Z/g, " ").replace(/-/g, "/");
 
     date_string = get_event_date(response[i].start_date, response[i].start_time, response[i].end_date, response[i].end_time);
