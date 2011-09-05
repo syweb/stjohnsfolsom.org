@@ -243,9 +243,10 @@ p{padding-bottom:15px; line-height:24px; padding-bottom:15px;}
 .contant .container{width:940px;}
 
 /*-- Home --*/
-.mass-box{width:320px; font-size:13px; padding-bottom:15px; }
+.mass-box{width:345px; font-size:13px; padding-bottom:15px; }
 .mass-box .day{float:left; color:#fff; width:72px; height:25px; padding:0 10px 0 8px; background:url(../images/bg-day-mass-day.gif) no-repeat; line-height:25px;}
-.mass-box .time{float:left; width:225px; line-height:25px;}
+.mass-box .time{float:left; width:250px; line-height:25px;}
+.mass-box .music{clear:both; margin:5px 0; line-height:18px;}
 .mass-box .sptr{clear:both; height:30px; background:url(../images/sptr-day-mass.gif) 0px center no-repeat ;}
 
 .bulletins-box{width:260px; font-size:13px; padding-bottom:5px; }
