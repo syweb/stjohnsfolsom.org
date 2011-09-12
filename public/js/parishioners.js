@@ -61,6 +61,8 @@ function get_group_bulletins(div_to_append, group_id, sort_by_field, order_by_va
       }
 
       $.each(response, function(i, item) {
+        response[i] = response[i].announcement;
+        
         var dt = response[i].updated_at.replace(/T|Z/g, " ").replace(/-/g, "/");
 
         var event_link = 'event-link-' + response[i].id;
@@ -128,6 +130,8 @@ function show_announcement(response, div_to_append, number) {
   }
 
   $.each(response, function(i, item) {
+    response[i] = response[i].announcement;
+
     var dt = response[i].updated_at.replace(/T|Z/g, " ").replace(/-/g, "/");
 
     var event_link = 'event-link-' + response[i].id;
@@ -198,7 +202,12 @@ function show_event(response, div_to_append, number, group_name) {
   }
 
   $.each(response, function(i, item) {
+    
+    response[i] = response[i].calendar;
+    
     var dt = response[i].updated_at.replace(/T|Z/g, " ").replace(/-/g, "/");
+    response[i].start_date = response[i].start_date.replace(/T|Z/g, " ").replace(/-/g, "/");
+    response[i].end_date = response[i].end_date.replace(/T|Z/g, " ").replace(/-/g, "/");
 
     date_string = get_event_date(response[i].start_date, response[i].start_time, response[i].end_date, response[i].end_time);
     var event_link = 'event-link-' + response[i].id;
@@ -267,6 +276,8 @@ function show_form(response, div_to_append, group_id, group_name, number) {
   $(div_to_append).append('<div id="accordion" class="cls-events"><div class="box-title">&nbsp;&nbsp;&nbsp;<em>' + group_name + '</em></div><ul id="events" ></ul>');
 
   $.each(response.reverse(), function(i, item) {
+    response[i] = response[i].form;
+    
     var dt = response[i].updated_at.replace(/T|Z/g, " ").replace(/-/g, "/");
 
     date_string = get_event_date(response[i].start_date, response[i].start_time, response[i].end_date, response[i].end_time);
