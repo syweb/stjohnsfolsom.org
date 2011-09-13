@@ -440,10 +440,11 @@ h5 a:active{color:#000; text-decoration:none;}
 
 
 .quick-view-ministries{position:relative;}
-.quick-view-mini-slide{position:absolute; top:0px; left:-670px; width:649px; border:3px solid #ccc; padding:15px 15px 15px 0; background:#fff; display:none; z-index:100;}
+.quick-view-mini-slide{position:absolute; top:50px; left:0px; width:870px; border:3px solid #ccc; padding:15px 15px 15px 0; background:#fff; display:none; z-index:200;}
 
 .quick-mini-col{float:left; width:215px; }
 .quick-mini-col .li-data,.quick-mini-col .li-title{margin-left:15px;}
+.quick-mini-col .li-data p{line-height:16px;}
 
 .quick-mini-col-big{float:left; width:430px;}
 .quick-mini-col-big .li-title{margin-left:15px;}
