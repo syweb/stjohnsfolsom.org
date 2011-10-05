@@ -311,5 +311,5 @@ function get_event_date(start_date, start_time, end_date, end_time) {
 
 // This is for header event icon
 function get_event_icon(){
-	$('.header-full .container').append('<div id="event-icon" ><a href="index.html" title="Summer"><img src="images/event-icon-summer.png" alt="Summer" /> </a></div>')
+	$('.header-full .container').append('<div id="event-icon" ><a href="index.html" title="Fall"><img src="images/event-icon-fall.png" alt="Fall" /> </a></div>')
 }
