@@ -139,7 +139,7 @@ function show_announcement(response, div_to_append, number) {
     if (i < number) {
 
       $(div_to_append).find('.event-box').append('<div class="event-title "><a>' + response[i].title + '</a></div>');
-      $(div_to_append).find('.event-box').append('<div class="event-dtail ">' + response[i].content + '<span id="' + event_link + '"></span></div>');
+      $(div_to_append).find('.event-box').append('<div class="event-dtail">' + response[i].content + '<span id="' + event_link + '"></span></div>');
 
       if (response[i].has_downloads == true) {
         download_link = PARISH_URL + '/publik/download/' + response[i].id;
@@ -215,7 +215,7 @@ function show_event(response, div_to_append, number, group_name) {
     if (response[i].description == 'NA') {
       detail = '<div class="event-dtail"><span id="' + event_link + '"></span></div>';
     } else {
-      detail = '<div class="event-dtail">' + response[i].description + '<span id="' + event_link + '"></span></div>';
+      detail = '<div class="event-dtail">' + response[i].description + '<span id="' + event_link + '"></span></div><div class="sptr1"></div>';
     }
 
     if (i < number) {
