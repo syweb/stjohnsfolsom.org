@@ -215,7 +215,7 @@ function show_event(response, div_to_append, number, group_name) {
     if (response[i].description == 'NA') {
       detail = '<div class="event-dtail"><span id="' + event_link + '"></span></div>';
     } else {
-      detail = '<div class="event-dtail">' + response[i].description + '<span id="' + event_link + '"></span></div><div class="sptr1"></div>';
+      detail = '<div class="event-dtail">' + response[i].content + '<span id="' + event_link + '"></span></div><div class="sptr1"></div>';
     }
 
     if (i < number) {
