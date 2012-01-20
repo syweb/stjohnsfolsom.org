@@ -8,8 +8,8 @@ function for_accordian(accordian_no){
 
 	//Accordian Start
 	$(accordian_no + '.event-dtail').css({ display:"none"});
-	$(accordian_no + '.event-dtail:first').css({ display:"block"});
-	$(accordian_no + '.event-title:first').addClass('ui-state-active');
+	//$(accordian_no + '.event-dtail:first').css({ display:"block"});
+	//$(accordian_no + '.event-title:first').addClass('ui-state-active');
 
 
 	$(accordian_no + '.event-title').click(function(){
