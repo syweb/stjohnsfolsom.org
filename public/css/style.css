@@ -296,7 +296,7 @@ p{padding-bottom:15px; line-height:24px; padding-bottom:15px;}
 .cls-events ul{border:1px solid #bdbcbd; background:#fff url(../images/bg-upcomeing-box.gif) bottom repeat-x;  }
 
 .cls-events ul .event-title {background:#f6f6f6; border:1px solid #eee; margin-bottom:1px; padding:4px; cursor:pointer;}
-.cls-events ul .event-dtail{padding:10px 2%; width:96%; background:#fff;  float:left;   }
+.cls-events ul .event-dtail{padding:10px 2%; width:96%; background:#fff;  float:left;}
 
 .cls-events .event-title .date{background: url(../images/bg-date-upcomeing.gif) top left no-repeat; font-family:georgia,sans-serif, Arial, Helvetica;  text-align:center; float:left; height:23px; line-height:23px; width:64px; padding-right:10px;}
 
@@ -474,5 +474,109 @@ h5 a:active{color:#000; text-decoration:none;}
 .staff-dd a:active{color:#666; text-decoration:none;}
 
 #event-icon{position:absolute; height:62px; width:128px; top:70px; left:460px; z-index:10;  }
+
+/*------------------- dropdown menu ---------------------------*/
+
+.menu{  position:relative; z-index:1; height:37px;  }
+.menubar{ height:37px; background:url('../images/menu-m.png')  left top repeat-x;}
+.menubar .menubar-l{  width:14px;  height:37px; background:url('../images/menu-l.png') left top no-repeat;  float:left;}
+.menubar .menubar-r{ width:14px;  height:37px; background:url('../images/menu-r.png') right top no-repeat;  float:right;}
+.menubar .menubar-m{ height:24px; width:900px;  float:left;}
+
+
+
+/*-- Top menu Style --*/
+
+.site-menu li{float:left; font-size:16px;   position:relative; }
+.site-menu li a{text-decoration:none;  display:block; padding:0px 20px; line-height:37px; }
+
+
+.site-menu li:hover, 
+.site-menu li.hover,
+.site-menu li.on{ /*background:url('../images/bg-menu-l.png') left top no-repeat;*/ }
+.site-menu li:hover a, 
+.site-menu li.hover a,
+.site-menu li.on a { /*background:url('../images/bg-menu-r.png') right top no-repeat;*/ color:#333; }
+
+
+/*-- reset second lavel submenu --*/
+.site-menu li.on ul li,
+.site-menu li.on ul li a,
+.site-menu li:hover ul li,
+.site-menu li:hover ul li a,
+.site-menu li.hover ul li,
+.site-menu li.hover ul li a,
+.site-menu li ul li,
+.site-menu li ul li a{background:none; line-height:20px; padding:0px;}
+
+
+
+
+
+
+/* set submenu ul */
+.site-menu li ul
+{position:absolute; width:170px; top:25px; left:15px; background:#fff; padding:0; visibility:hidden;  border:1px solid #d1d1d1;}
+.site-menu li ul li ul{width:170px; top:0px; left:170px; }
+
+
+/* set submenu li */
+.site-menu li ul li{width:170px; margin:0px; }
+
+.site-menu li ul li{ border:1px solid #fff;  border-left:none; border-right:none;}
+.site-menu li ul li:hover,
+.site-menu li ul li.hover{ border:1px solid #d1d1d1; background:#ceeeeb; border-left:none; border-right:none; }
+
+
+/*-- Top menu Three lavel text and background color --*/
+
+/*-- Lavel 1 --*/
+
+
+
+.site-menu li a, 
+.site-menu li a,
+.site-menu li a{ color:#333;  }
+
+.site-menu li:hover a, 
+.site-menu li.hover a,
+.site-menu li.on a{ color:#333;}
+
+/*-- Lavel 2 --*/
+.site-menu li:hover ul li, 
+.site-menu li.hover ul li,
+.site-menu li.on ul li { background:none; }
+
+.site-menu li:hover ul li:hover , 
+.site-menu li.hover ul li.hover ,
+.site-menu li.on ul li.on { background:#ceeeeb;}
+
+
+
+.site-menu li:hover ul li a, 
+.site-menu li.hover ul li a,
+.site-menu li.on ul li a{ color:#333; padding:5px 10px;}
+
+.site-menu li:hover ul li:hover a, 
+.site-menu li.hover ul li.hover a,
+.site-menu li.on ul li.on a{ color:#333;}
+
+/*-- Lavel 3 --*/
+
+.site-menu li:hover ul li:hover ul li , 
+.site-menu li.hover ul li.hover ul li ,
+.site-menu li.on ul li.on ul li { background:none;}
+
+.site-menu li:hover ul li:hover ul li:hover  , 
+.site-menu li.hover ul li.hover ul li.hover  ,
+.site-menu li.on ul li.on ul li.on { background:#ceeeeb;}
+
+.site-menu li:hover ul li:hover ul li a, 
+.site-menu li.hover ul li.hover ul li a,
+.site-menu li.on ul li.on ul li a{ color:#333;}
+
+.site-menu li:hover ul li:hover ul li:hover a , 
+.site-menu li.hover ul li.hover ul li.hover  a,
+.site-menu li.on ul li.on ul li.on a{ color:#333;}
 
 
