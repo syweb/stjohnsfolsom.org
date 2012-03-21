@@ -36,6 +36,8 @@ a:active{color:#2e9896; text-decoration:none;}
 .grn-textu a:hover{color:#2e9896; text-decoration:none;}
 .grn-textu a:active{color:#2e9896; text-decoration:underline;}
 
+.text-red{color:#cd0000;}
+
 .italic-georgia{}
 
 h2{font-size:22px; color:#000; font-weight:bold; padding-bottom:15px; }
@@ -475,4 +477,16 @@ h5 a:active{color:#000; text-decoration:none;}
 
 #event-icon{position:absolute; height:62px; width:128px; top:70px; left:460px; z-index:10;  }
 
+/* for easter12 */
+.for-easter .col280,.for-easter .col320 { width:200px;}
 
+.for-easter .mass-box,
+.for-easter .mass-box .time{ width:200px;}
+.for-easter .mass-box .day{ width:50px;}
+.for-easter .mass-box .sptr{ background-position:center;}
+
+.easterbox{margin-left:22px; }
+.easterbox p{margin-bottom:5px; font-size:12px;}
+.easterbox .event-title {background:#ccc; font-weight:bold;}
+.easterbox .holy-week h3{padding-top:15px;}
+.easterbox .holy-week p{line-height:18px; padding-bottom:0px;}
