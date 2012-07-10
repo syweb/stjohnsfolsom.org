@@ -36,6 +36,8 @@ a:active{color:#2e9896; text-decoration:none;}
 .grn-textu a:hover{color:#2e9896; text-decoration:none;}
 .grn-textu a:active{color:#2e9896; text-decoration:underline;}
 
+.text-red{color:#cd0000;}
+
 .italic-georgia{}
 
 h2{font-size:22px; color:#000; font-weight:bold; padding-bottom:15px; }
