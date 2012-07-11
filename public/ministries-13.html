@@ -14,12 +14,20 @@
 	<script type="text/javascript" src="js/ministries.js"></script>
 	<script type="text/javascript" src="js/parishioners.js"></script>
 	<script type="text/javascript">
+	
+	
 
     $(document).ready(function() {
       get_group_announcements("#group_announcements", "1106", "title", "asc");
       get_group_events("#group_events", "1106", "start_date", "asc");
       get_group_forms("#group_events_1", "1106", "Knights of Columbus");
       get_event_icon()
+      
+      $('#show_video').click(function(){
+        $('#video').slideDown()
+      })
+      
+      
     });
 
 	</script>
@@ -123,8 +131,8 @@
 						<p>Cal Dexter (916) 988-5126 </p>
 						
 						
-						<h3>Experience of a Lifetime - Interviews with Knights of varying ages and backgrounds</h3>
-<iframe src="http://player.vimeo.com/video/45480424" width="640" height="480" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe> 
+						<h3 id="show_video"><a href="#video">Experience of a Lifetime - Interviews with Knights of varying ages and backgrounds</a></h3>
+<div id="video" style="display:none;"><p><iframe src="http://player.vimeo.com/video/45480424" width="300" height="225" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe></p> </div>
 
 
 						<div id="accordion" class="cls-events"><h4>Files and Forms</h4> </div>
