@@ -307,8 +307,6 @@ p{padding-bottom:15px; line-height:24px; padding-bottom:15px;}
 
 
 
-.group_events span{ line-height: 1em; }
-
 
 
 
@@ -477,4 +475,8 @@ h5 a:active{color:#000; text-decoration:none;}
 
 #event-icon{position:absolute; height:62px; width:128px; top:70px; left:460px; z-index:10;  }
 
+
+.group_events span{ line-height: 1em; }
+.group_events p{ padding-bottom: 0; }
+.group_events event-dtail{ line-height: 1em; }
 
