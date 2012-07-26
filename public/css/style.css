@@ -477,6 +477,6 @@ h5 a:active{color:#000; text-decoration:none;}
 
 
 .group_events span{ line-height: 1em; }
-.group_events p{ padding-bottom: 0; }
+.group_events p{ padding-bottom: 8px; }
 .group_events event-dtail{ line-height: 1em; }
 
