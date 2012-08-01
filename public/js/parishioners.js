@@ -196,6 +196,42 @@ function get_home_page_events(div_to_append, sort_by_field, order_by_value, numb
 
 }
 
+
+function get_group_welcome(div_to_append, group_id) {
+  
+  $.ajax({
+    url: PARISH_URL + "/get_group_welcome.json/" + group_id,
+    cache: false,
+    type: 'get',
+    dataType: 'jsonp',
+    success: function(response) { 
+      show_welcome(response, div_to_append); 
+    }
+  });
+
+}
+
+
+function show_welcome(response, div_to_append) {
+
+  $.each(response, function(i, item) {
+    response[i] = response[i].welcome_message;
+
+    var dt = response[i].updated_at.replace(/T|Z/g, " ").replace(/-/g, "/");
+
+    var event_link = 'event-link-' + response[i].id;
+
+   // $(div_to_append).append('<h2>' + response[i].title + '</h2>');
+    $(div_to_append).append('<div class="incol1 broder1" style="padding-bottom: 30px;"><div class="incol1-inner">' + response[i].content + '</div>');
+
+  });
+  if (response != ""){
+    $(div_to_append).append('');
+  }
+}
+
+
+
 function show_event(response, div_to_append, number, group_name) {
   if (response != ""){
     $(div_to_append).append('<div id="accordion" class="cls-events"><h4>' + group_name + '</h4><ul id="events" ></ul>');
