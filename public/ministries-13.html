@@ -163,7 +163,20 @@
             			image: "images/faith-01.jpg", 
             			events: {
               			onComplete: function(event) {
-              			  $('#show_video').hide();
+
+                  		jwplayer("mediaplayer").setup({
+                  			flashplayer: "/jwplayer/player.swf",
+                  			width: '620',
+                  			height: '350',
+                  			file: "/video/in_Service_to_one_In_Service_to_all.flv",
+                  			image: "images/faith-01.jpg", 
+                  			events: {
+                    			onComplete: function(event) {
+                    			  $('#show_video').hide();
+                    			}
+                  			}
+                  		});
+
               			}
             			}
             		});
