@@ -148,7 +148,25 @@
 						<p>Cal Dexter (916) 988-5126 </p>
 						-->
 						<h2>Video Vault:</h2>
-						<div class="video_list" >
+
+						<div id="show_video">
+						  <!-- START OF THE PLAYER EMBEDDING TO COPY-PASTE -->
+            	<div id="mediaplayer">Video Player</div>
+
+            	<script type="text/javascript" src="../jwplayer/jwplayer.js"></script>
+            	<script type="text/javascript">
+            		jwplayer("mediaplayer").setup({
+            			flashplayer: "/jwplayer/player.swf",
+            			width: '620',
+            			height: '350',
+            			file: "/video/in_Service_to_one_In_Service_to_all.flv",
+            			image: "images/faith-01.jpg"
+            		});
+            	</script>
+            	<!-- END OF THE PLAYER EMBEDDING -->
+						</div>
+
+						<div class="video_list" style="height:160px; overflow-y:auto;">
               <div class="show_video1">
               <strong ><a href="#show_video">Why Join the Knights of Columbus?</a></strong><br>
               <p>In Service to One. In Service to All.</p>
@@ -174,22 +192,6 @@
               </div>
 
             </div>
-						<div id="show_video">
-						  <!-- START OF THE PLAYER EMBEDDING TO COPY-PASTE -->
-            	<div id="mediaplayer">JW Player goes here</div>
-
-            	<script type="text/javascript" src="/jwplayer/jwplayer.js"></script>
-            	<script type="text/javascript">
-            		jwplayer("mediaplayer").setup({
-            			flashplayer: "/jwplayer/player.swf",
-            			width: '620',
-            			height: '350',
-            			file: "/video/in_Service_to_one_In_Service_to_all.flv",
-            			image: "images/faith-01.jpg"
-            		});
-            	</script>
-            	<!-- END OF THE PLAYER EMBEDDING -->
-						</div>
 					</div>
 											
 				</div>
