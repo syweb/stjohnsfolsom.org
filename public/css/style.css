@@ -481,3 +481,10 @@ h5 a:active{color:#000; text-decoration:none;}
 .group_events event-dtail{ line-height: 1em; }
 .group_welcome p{ padding-bottom: 1px; line-height: 1em;}
 .group_welcome { padding-bottom: 30px;}
+
+.right-bottom-files {
+	float: right;
+	position: absolute;
+	bottom: 0;
+	right: 100px;
+}
