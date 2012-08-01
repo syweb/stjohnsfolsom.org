@@ -161,8 +161,10 @@
             			height: '350',
             			file: "/video/in_Service_to_one_In_Service_to_all.flv",
             			image: "images/faith-01.jpg", 
-            			onComplete: function(event) {
-            			  $('#show_video').hide();
+            			events: {
+              			onComplete: function(event) {
+              			  $('#show_video').hide();
+              			}
             			}
             		});
             	</script>
