@@ -160,7 +160,10 @@
             			width: '620',
             			height: '350',
             			file: "/video/in_Service_to_one_In_Service_to_all.flv",
-            			image: "images/faith-01.jpg"
+            			image: "images/faith-01.jpg", 
+            			onComplete: function(event) {
+            			  $('#show_video').hide();
+            			}
             		});
             	</script>
             	<!-- END OF THE PLAYER EMBEDDING -->
