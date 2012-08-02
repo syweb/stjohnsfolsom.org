@@ -38,6 +38,8 @@
         player.sendEvent("play");
       })
       
+      $(".lightbox").overlay();
+      
     });
 
 	</script>
@@ -231,6 +233,7 @@
             			events: {
               			onComplete: function(event) {
               			  $('#show_video').hide();
+              			  $(".lightbox").overlay();
               			}
             			}
             		});
