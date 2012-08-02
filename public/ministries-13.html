@@ -10,7 +10,7 @@
 	<meta name="keywords" content="Folsom, Sacramento County, Northern California, St. John The Baptist Catholic Church "/>
 	
 	<link href="css/style.css" rel="stylesheet" type="text/css" />
-	<script type="text/javascript" src="js/jquery-1.4.2.min.js"></script>
+	<script type="text/javascript" src="js/jquery.tools.min.js"></script>
 	<script type="text/javascript" src="js/ministries.js"></script>
 	<script type="text/javascript" src="js/parishioners.js"></script>
 	<script type="text/javascript">
@@ -130,86 +130,8 @@
 						
     				<div id='group_welcome' class='group_welcome' style="line-height: 1em; padding-bottom: 40px;"> </div>	
 						<br/><br/><br/>
-<!--
-						<h5 >Members</h5>
-						<p>Men of the parish. </p>
+
 						
-							
-						<h5 >Times</h5>
-						<div class="bulet-list1">
-							<ul>
-								<li>Business meeting second Wednesday. </li>
-								<li>Social (visitors welcome) fourth Wednesday.</li>
-								<li> Pancake breakfast first Sunday of every month. </li>
-								<li>Blood drive every other month. </li>
-							</ul>
-						</div>
-						<h5>Contact</h5>
-						<p>Cal Dexter (916) 988-5126 </p>
-						-->
-						<h2>Video Vault:</h2>
-
-						<div id="show_video">
-						  <!-- START OF THE PLAYER EMBEDDING TO COPY-PASTE -->
-            	<div id="mediaplayer">Video Player</div>
-
-            	<script type="text/javascript" src="../jwplayer/jwplayer.js"></script>
-            	<script type="text/javascript">
-            		jwplayer("mediaplayer").setup({
-            			flashplayer: "/jwplayer/player.swf",
-            			width: '620',
-            			height: '350',
-            			file: "/video/in_Service_to_one_In_Service_to_all.flv",
-            			image: "images/faith-01.jpg", 
-            			events: {
-              			onComplete: function(event) {
-
-                  		jwplayer("mediaplayer").setup({
-                  			flashplayer: "/jwplayer/player.swf",
-                  			width: '620',
-                  			height: '350',
-                  			file: "/video/in_Service_to_one_In_Service_to_all.flv",
-                  			image: "images/faith-01.jpg", 
-                  			events: {
-                    			onComplete: function(event) {
-                    			  $('#show_video').hide();
-                    			}
-                  			}
-                  		});
-
-              			}
-            			}
-            		});
-            	</script>
-            	<!-- END OF THE PLAYER EMBEDDING -->
-						</div>
-
-						<div class="video_list" style="padding-top: 30px; height:160px; overflow-y:auto;">
-              <div class="show_video1">
-              <strong ><a href="#show_video">Why Join the Knights of Columbus?</a></strong><br>
-              <p>In Service to One. In Service to All.</p>
-              </div>
-              <div class="show_video2">
-              <strong ><a href="#show_video">Strengthening Your Faith & Your Church</a></strong><br>
-              <p>Experience of a Lifetime – Interviews with Knights of varying ages and backgrounds</p>
-              </div>
-
-              <div class="show_video3">
-              <strong ><a href="#show_video">An Overview of Knights of Columbus Charitable Initiatives Around the World</a></strong><br>
-              <p>So That the World May Know New Hope</p>
-              </div>
-
-              <div class="show_video4">
-              <strong ><a href="#show_video">Knights of Columbus are Men of Service, seeking to help people in need by means of material aid and Christian Charity</a></strong><br>
-              <p>Be The Difference</p>
-              </div>
-
-              <div class="show_video5">
-              <strong ><a href="#show_video">Knights of Columbus Soccer Challenge and Free Throw youth programs</a></strong><br>
-              <p>Free Throw Championship and Soccer Challenge</p>
-              </div>
-
-            </div>
 					</div>
 											
 				</div>
@@ -225,23 +147,106 @@
 						<div id='group_announcements' class='group_announcements' > </div>	
 <!--						<div class="event-box-sptr"></div>-->
 					</div>
+
+      		<div class="" style="width: 500px; padding-top: 550px;">
+
+      			<div>
+      			<h2>Video Vault:</h2>
+
+
+      			<div class="video_list" style="padding-top: 30px; height:160px; overflow-y:auto;">
+              <div class="show_video1">
+              <strong ><a href="#show_video" rel="#videoplayer" class="lightbox">Why Join the Knights of Columbus?</a></strong><br>
+              <p>In Service to One. In Service to All.</p>
+              </div>
+              <div class="show_video2">
+              <strong ><a href="#show_video"  rel="#videoplayer" class="lightbox">Strengthening Your Faith & Your Church</a></strong><br>
+              <p>Experience of a Lifetime – Interviews with Knights of varying ages and backgrounds</p>
+              </div>
+
+              <div class="show_video3" rel="#videoplayer" class="lightbox">
+              <strong ><a href="#show_video">An Overview of Knights of Columbus Charitable Initiatives Around the World</a></strong><br>
+              <p>So That the World May Know New Hope</p>
+              </div>
+
+              <div class="show_video4 rel="#videoplayer" class="lightbox"">
+              <strong ><a href="#show_video">Knights of Columbus are Men of Service, seeking to help people in need by means of material aid and Christian Charity</a></strong><br>
+              <p>Be The Difference</p>
+              </div>
+
+              <div class="show_video5" rel="#videoplayer" class="lightbox">
+              <strong ><a href="#show_video">Knights of Columbus Soccer Challenge and Free Throw youth programs</a></strong><br>
+              <p>Free Throw Championship and Soccer Challenge</p>
+              </div>
+
+            </div>
+
+            </div>
+            </div>
+
 				</div>
 
+      		<div class="incol2" style="padding-top: 20px;">
+        					<div id="accordion" class="cls-events"><h4>Files and Forms</h4> </div>
+                  <div id='group_events_1' class='group_events_2 accordian_2' > </div>
+                  <div class="sptr20"></div>
+
+
+    		</div>
 				<!-- incol2 end -->
 				<div class="sptr1"></div>
 			</div>
 			
 		</div>
-		<div class="incol2 right-bottom-files" style="padding-top: 100px;">
-    					<div id="accordion" class="cls-events"><h4>Files and Forms</h4> </div>
-              <div id='group_events_1' class='group_events_2 accordian_2' > </div>
-              <div class="sptr20"></div>
-
-
-		</div>
 		
 		<!-- contant end -->
 		
+		
+
+    <!-- overlay for the first trigger. id matches the rel- attribute -->
+    <div class="overlay black" id="videoplayer">
+
+			<div id="show_video">
+			  
+			  <!-- START OF THE PLAYER EMBEDDING TO COPY-PASTE -->
+      	<div id="mediaplayer">Video Player</div>
+
+      	<script type="text/javascript" src="/jwplayer/jwplayer.js"></script>
+      	<script type="text/javascript">
+      		jwplayer("mediaplayer").setup({
+      			flashplayer: "/jwplayer/player.swf",
+      			width: '620',
+      			height: '350',
+      			file: "/video/in_Service_to_one_In_Service_to_all.flv",
+      			image: "images/faith-01.jpg", 
+      			events: {
+        			onComplete: function(event) {
+
+            		jwplayer("mediaplayer").setup({
+            			flashplayer: "/jwplayer/player.swf",
+            			width: '620',
+            			height: '350',
+            			file: "/video/in_Service_to_one_In_Service_to_all.flv",
+            			image: "images/faith-01.jpg", 
+            			events: {
+              			onComplete: function(event) {
+              			  $('#show_video').hide();
+              			}
+            			}
+            		});
+
+        			}
+      			}
+      		});
+      	</script>
+      	<!-- END OF THE PLAYER EMBEDDING -->
+			</div>
+
+
+    </div>
+
+
+
 		
 		<!-- footer start -->
 		<div class="footer italic-georgia">
