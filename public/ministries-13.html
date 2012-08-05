@@ -31,14 +31,39 @@
         'show_video4': 'video/be_the_difference.mp4',
         'show_video5': 'video/free_throw_championship_and_soccer_challenge.mp4'
       }
-      $('.video_list div').click(function(){
-        player = document.getElementById('mediaplayer');
-        cls_name = $(this).attr('class')
-        player.sendEvent('load',urlMap[cls_name]);
-        player.sendEvent("play");
-      })
+
+      $(".lightbox").overlay({
+        mask: {
+            color: '#ebecff',
+            loadSpeed: 200,
+            opacity: 0.9
+        },
+        closeOnClick: true,
+        onLoad: function(e) {
+          //$('input').focus();
+          //console.log("trigger" + triggers.id);
+          //alert(e.srcElement.id);
+          
+          setTimeout(function(){
+            player = document.getElementById('mediaplayer');
+            player.sendEvent('load',urlMap[e.srcElement.id]);
+            player.sendEvent("play");
+            
+          }, 500);
+          
+        } ,
+        onClose: function(e) {
+          player = document.getElementById('mediaplayer');
+          player.sendEvent("stop");
+        }
+      });
       
-      $(".lightbox").overlay();
+      $('.video_list div').click(function(){
+        //player = document.getElementById('mediaplayer');
+        //cls_name = $(this).attr('class')
+        //player.sendEvent('load',urlMap[cls_name]);
+        //player.sendEvent("play");
+      })
       
     });
 
@@ -157,27 +182,29 @@
 
 
       			<div class="video_list" style="padding-top: 30px; height:160px; overflow-y:auto;">
+      			  
               <div class="show_video1">
-              <strong ><a href="#show_video" rel="#videoplayer" class="lightbox">Why Join the Knights of Columbus?</a></strong><br>
+              <strong><a id='show_video1' href="#show_video" rel="#videoplayer" class="lightbox">Why Join the Knights of Columbus?</a></strong><br>
               <p>In Service to One. In Service to All.</p>
               </div>
+              
               <div class="show_video2">
-              <strong ><a href="#show_video" rel="#videoplayer" class="lightbox">Strengthening Your Faith & Your Church</a></strong><br>
+              <strong><a id='show_video2' href="#show_video" rel="#videoplayer" class="lightbox">Strengthening Your Faith & Your Church</a></strong><br>
               <p>Experience of a Lifetime – Interviews with Knights of varying ages and backgrounds</p>
               </div>
 
               <div class="show_video3">
-              <strong ><a href="#show_video" rel="#videoplayer" class="lightbox">An Overview of Knights of Columbus Charitable Initiatives Around the World</a></strong><br>
+              <strong><a id='show_video3' href="#show_video" rel="#videoplayer" class="lightbox">An Overview of Knights of Columbus Charitable Initiatives Around the World</a></strong><br>
               <p>So That the World May Know New Hope</p>
               </div>
 
               <div class="show_video4">
-              <strong ><a href="#show_video" rel="#videoplayer" class="lightbox">Knights of Columbus are Men of Service, seeking to help people in need by means of material aid and Christian Charity</a></strong><br>
+              <strong ><a id='show_video4' href="#show_video" rel="#videoplayer" class="lightbox">Knights of Columbus are Men of Service, seeking to help people in need by means of material aid and Christian Charity</a></strong><br>
               <p>Be The Difference</p>
               </div>
 
               <div class="show_video5">
-              <strong ><a href="#show_video" rel="#videoplayer" class="lightbox">Knights of Columbus Soccer Challenge and Free Throw youth programs</a></strong><br>
+              <strong ><a id='show_video5' href="#show_video" rel="#videoplayer" class="lightbox">Knights of Columbus Soccer Challenge and Free Throw youth programs</a></strong><br>
               <p>Free Throw Championship and Soccer Challenge</p>
               </div>
 
@@ -219,7 +246,7 @@
       			flashplayer: "/jwplayer/player.swf",
       			width: '620',
       			height: '350',
-      			file: "/video/in_Service_to_one_In_Service_to_all.flv",
+      			//file: "/video/in_Service_to_one_In_Service_to_all.flv",
       			image: "images/faith-01.jpg", 
       			events: {
         			onComplete: function(event) {
@@ -228,7 +255,6 @@
             			flashplayer: "/jwplayer/player.swf",
             			width: '620',
             			height: '350',
-            			file: "/video/in_Service_to_one_In_Service_to_all.flv",
             			image: "images/faith-01.jpg", 
             			events: {
               			onComplete: function(event) {
