@@ -222,7 +222,7 @@ function show_welcome(response, div_to_append) {
     var event_link = 'event-link-' + response[i].id;
 
    // $(div_to_append).append('<h2>' + response[i].title + '</h2>');
-    $(div_to_append).append('<div class="incol1 broder1" style="padding-bottom: 30px;"><div class="incol1-inner">' + response[i].content + '</div>');
+    $(div_to_append).append('<div class="incol1" style="padding-bottom: 30px;"><div class="incol1-inner">' + response[i].content + '</div>');
 
   });
   if (response != ""){
