@@ -21,7 +21,7 @@
   $(document).ready(function() {
     get_group_bulletins("#group_bulletins", "1123", "updated_at", "desc", 3);
     get_group_announcements("#group_announcements", "1116", "title", "asc", 30);
-    get_group_events("#group_events", "1116", "start_date", "asc", 30, "Upcoming Events");
+    get_group_events("#group_events", "1116", "start_date", "asc", 5000, "Upcoming Events");
     get_event_icon()
 	});
 
