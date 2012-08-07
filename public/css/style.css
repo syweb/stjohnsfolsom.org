@@ -543,6 +543,6 @@ h5 a:active{color:#000; text-decoration:none;}
 .scroll-list #events{
   overflow:hidden;
   overflow-y:auto;
-  height:300px;
+  max-height:300px;
 }
 .scroll-list #events .event-title .event-title-text{width:150px;}
