@@ -205,7 +205,9 @@ function get_group_welcome(div_to_append, group_id) {
     type: 'get',
     dataType: 'jsonp',
     success: function(response) { 
-      show_welcome(response, div_to_append); 
+      show_welcome(response, div_to_append);
+      //this code for Show Video on Ministries-13.html
+      $(div_to_append).find(".lightbox").overlay(overlayConfig);
     }
   });
 
