@@ -142,8 +142,11 @@ function show_announcement(response, div_to_append, number) {
       $(div_to_append).find('.event-box').append('<div class="event-dtail">' + response[i].content + '<span id="' + event_link + '"></span></div>');
 
       if (response[i].has_downloads == true) {
-        download_link = PARISH_URL + '/publik/download/' + response[i].id;
-        $(div_to_append).find('#'+event_link).append('<br/><a href="' + download_link + '">Download Attachment</a>');
+		for (var n=0; n<response[i].attachment_count; n++)
+		{
+			download_link = PARISH_URL + '/publik/multiple_attachment_as_download/' + response[i].id + '/' + n;
+			$(div_to_append).find('#'+event_link).append('<br/><a href="' + download_link + '">Download Attachment</a>');
+		}
       }
     }
 
