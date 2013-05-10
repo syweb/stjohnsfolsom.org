@@ -210,7 +210,9 @@ function get_group_welcome(div_to_append, group_id) {
     success: function(response) { 
       show_welcome(response, div_to_append);
       //this code for Show Video on Ministries-13.html
-      $(div_to_append).find(".lightbox").overlay(overlayConfig);
+      if ($(".lightbox").length > 0){
+        $(div_to_append).find(".lightbox").overlay(overlayConfig);
+      }
     }
   });
 
