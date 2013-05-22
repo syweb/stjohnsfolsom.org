@@ -209,7 +209,7 @@ p{padding-bottom:15px; line-height:24px; padding-bottom:15px;}
 .banner-menu{position:absolute; width:940px; height:53px;  top:308px; z-index:100; /*font-family:georgia,sans-serif,Arial,Helvetica; */  }
 .banner-menu-over-img{position:absolute; width:30px; height:150px; top:-1px; left:0;}
 
-.banner-menu a {display:block;  height:53px; width:235px;  background:url(../images/bg-banner-menu.png) -252px 0 no-repeat; color:#fff; text-decoration:none; float:left; font-size:17px; line-height:22px;}
+.banner-menu a {display:block;  height:53px; width:188px;  background:url(../images/bg-banner-menu.png) -252px 0 no-repeat; color:#fff; text-decoration:none; float:left; font-size:17px; line-height:22px;}
 .banner-menu a span{padding:5px 0 0 55px; display:block;}
 .banner-menu div {display:block; padding:16px 10px 0 8px; height:34px;  background:url(../images/bg-banner-menu.png) no-repeat; color:#fff; text-decoration:none;}
 .banner-menu a:link{color:#fff; text-decoration:none;}
