@@ -1,5 +1,5 @@
-var PARISH_URL = 'https://stjohnfolsom.schoolyardapp.com';
-//var PARISH_URL = 'https://saintjosephredding.schoolyardapp.com';
+var PARISH_URL = 'https://stjohnfolsom.beehively.com';
+//var PARISH_URL = 'https://saintjosephredding.beehively.com';
 //var PARISH_URL = 'http://stjohnfolsom.local-sy.com:4001';
 
 function for_accordian(accordian_no){

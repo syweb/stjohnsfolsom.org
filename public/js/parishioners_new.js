@@ -1,5 +1,5 @@
-var PARISH_URL = 'https://stjohnfolsom.schoolyardapp.com';
-var PARISH_URL_UPDATE = 'http://stjohnfolsom.schoolyardapp.com';
+var PARISH_URL = 'https://stjohnfolsom.beehively.com';
+var PARISH_URL_UPDATE = 'http://stjohnfolsom.beehively.com';
 
 $(document).ready(function() {
   
