@@ -473,7 +473,7 @@ h5 a:active{color:#000; text-decoration:none;}
 .staff-dd a:hover{color:#2E9896; text-decoration:none;}
 .staff-dd a:active{color:#666; text-decoration:none;}
 
-#event-icon{position:absolute; height:62px; width:128px; top:70px; left:460px; z-index:10; display:none;  }
+#event-icon{position:absolute; height:62px; width:128px; top:70px; left:460px; z-index:10;  }
 
 
 .group_events span{ line-height: 1em; }
