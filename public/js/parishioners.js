@@ -1,6 +1,8 @@
 var PARISH_URL = 'https://stjohnfolsom.beehively.com';
 //var PARISH_URL = 'https://saintjosephredding.beehively.com';
 //var PARISH_URL = 'http://stjohnfolsom.local-sy.com:4001';
+//var PARISH_URL = 'https://ghanshyam.schoolyardapp.com';
+
 
 function for_accordian(accordian_no){
 
@@ -335,9 +337,6 @@ function show_form(response, div_to_append, group_id, group_name, number) {
 }
 
 
-
-
-
 function get_event_date(start_date, start_time, end_date, end_time) {
   var m_names = new Array("Jan", "Feb", "Mar",
   "Apr", "May", "Jun", "Jul", "Aug", "Sep",
@@ -353,6 +352,34 @@ function get_event_date(start_date, start_time, end_date, end_time) {
 
 
 // This is for header event icon
-function get_event_icon(){
+//function get_event_icon(){
 //$('.header-full .container').append('<div id="event-icon" ><a href="index.html" title="Christmas"><img src="images/event-icon-cristmas.png" alt="Christmas" /> </a></div>')
+//}
+
+/*-- icon code start --*/
+function get_event_icon(div_to_append, group_id, group_name, order_by_value, number) {
+  $.ajax({
+    url: PARISH_URL + "/get_group_forms.json/" + group_id,
+    cache: false,
+    type: 'get',
+    dataType: 'jsonp',
+    success: function(response) {
+      show_icon(response, div_to_append, group_id, group_name, order_by_value, number);
+    }
+  });
 }
+
+function show_icon(response, div_to_append, group_id, group_name, order_by_value, number) {
+  $(div_to_append).append('<div id="event-icon"></div>');
+
+  $.each(response.reverse(), function(i, item) {
+    if(i < number ){
+      response[i] = response[i].form;
+      var dt = response[i].updated_at.replace(/T|Z/g, " ").replace(/-/g, "/");
+      date_string = get_event_date(response[i].start_date, response[i].start_time, response[i].end_date, response[i].end_time);
+      download_link = PARISH_URL + '/publik_file_download/' + response[i].id;
+      $(div_to_append).find('#event-icon').append('<img src="' + download_link + '"/>');
+    }
+  });
+}
+/*-- Icon code End --*/
