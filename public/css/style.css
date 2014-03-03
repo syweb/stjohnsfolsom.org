@@ -224,7 +224,7 @@ p{padding-bottom:15px; line-height:24px; padding-bottom:15px;}
 
 .footer .container{padding-top:15px;}
 .footer .column-l{width:45%; padding-top:0px; }
-.footer .column-r{width:45%;  text-align:right; color:#6c6c6c;}
+.footer .column-r{width:45%;  text-align:right; color:#6c6c6c; padding-top:12px;}
 .footer .column-r span{ font-family:Calibri, Arial, Helvetica, sans-serif; font-size:12px; font-style:normal;}
 .footer a{color:#6c6c6c; text-decoration:none;}
 .footer a:link{color:#6c6c6c; text-decoration:none;}
