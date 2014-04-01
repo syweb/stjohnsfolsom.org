@@ -241,7 +241,7 @@ p{padding-bottom:15px; line-height:24px; padding-bottom:15px;}
 .footer-links{padding-bottom:10px; text-align:center;}
 
 /*-- contant --*/
-.contant{padding-bottom:40px; }
+.contant{padding-bottom:25px; }
 .contant .container{width:940px;}
 
 /*-- Home --*/
@@ -254,9 +254,10 @@ p{padding-bottom:15px; line-height:24px; padding-bottom:15px;}
 .bulletins-box{width:260px; font-size:13px; padding-bottom:5px; }
 .bulletins-box .sptr{clear:both; height:20px; background:url(../images/sptr-day-mass.gif) -20px center no-repeat ;}
 
-.face-book{padding:10px 0 15px 0;}
+.face-book{padding:10px 0 15px 0; }
 .div-box{padding:0 0 15px 0;}
-.twitter{padding:0 0 25px 0;}
+.twitter{padding:10px 0 25px 0;}
+.left-align { float:left; margin-right:15px;}
 
 .upcomeing-box{padding-bottom:15px; width:260px;  }
 .upcomeing-box .title{height:35px; background:url(../images/bg-upcoming-title.gif) repeat-x; padding-left:10px; color:#fff; font-size:16px; line-height:30px;}
@@ -480,7 +481,9 @@ h5 a:active{color:#000; text-decoration:none;}
 .group_events p{ padding-bottom: 1px; line-height: 1em;}
 .group_events event-dtail{ line-height: 1em; }
 .group_welcome p{ padding-bottom: 1px; line-height: 1em;}
-.group_welcome { padding-bottom: 30px;}
+/*.group_welcome { padding-bottom: 30px;}*/
+.incol1 {padding-bottom:10px !important;}
+.incol1-inner p {padding:0 !important; min-height:80px !important; line-height:20px !important;}
 
 .right-bottom-files {
 	float: right;
