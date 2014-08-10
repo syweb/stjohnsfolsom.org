@@ -174,6 +174,7 @@ function get_group_events(div_to_append, group_id, sort_by_field, order_by_value
     dataType: 'jsonp',
     success: function(response) { 
       show_event(response, div_to_append, number, group_name); 
+      event_responses = response;
     }
   });
 
@@ -240,8 +241,8 @@ function show_welcome(response, div_to_append) {
 }
 
 
-
 function show_event(response, div_to_append, number, group_name) {
+    
   if (response != ""){
     $(div_to_append).append('<div id="accordion" class="cls-events"><h4>' + group_name + '</h4><ul id="events" ></ul>');
   }
@@ -250,7 +251,7 @@ function show_event(response, div_to_append, number, group_name) {
     
     response[i] = response[i].calendar;
     
-    var dt = response[i].updated_at.replace(/T|Z/g, " ").replace(/-/g, "/");
+    //var dt = response[i].updated_at.replace(/T|Z/g, " ").replace(/-/g, "/");
     response[i].start_date = response[i].start_date.replace(/T|Z/g, " ").replace(/-/g, "/");
     response[i].end_date = response[i].end_date.replace(/T|Z/g, " ").replace(/-/g, "/");
 
@@ -260,7 +261,7 @@ function show_event(response, div_to_append, number, group_name) {
     if (response[i].description == 'NA') {
       detail = '<div class="event-dtail"><span id="' + event_link + '"></span></div>';
     } else {
-      detail = '<div class="event-dtail">' + response[i].content + '<span id="' + event_link + '"></span></div><div class="sptr1"></div>';
+      detail = '<div class="event-dtail">' + response[i].description + '<span id="' + event_link + '"></span></div><div class="sptr1"></div>';
     }
 
     if (i < number) {
