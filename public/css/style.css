@@ -1,11 +1,7 @@
 @charset "utf-8";
 /*------------------------------------------- 	
 |	Document	:	CSS						|	
-|	WebSite		:	St.John					| 
-|	Creator		:	Chintan Sheth			|
-|	Date		:	04-Aug-2010				|
-|	Updater		:	Chintan Sheth			|
-|	Last Update	:	04-Aug-2010				|
+|	WebSite		:	St.John				|
 |--------------------------------------------*/
 
 html, body{font-size:14px;   margin:0px; background:#f1f1f1 url(../images/bg-page.gif)repeat-x; padding:0px; font-family:Calibri, Arial, Helvetica, sans-serif; font-weight:normal; color:#3b3b3b;} /*georgia,sans-serif,Arial,Helvetica*/
@@ -371,7 +367,7 @@ p{padding-bottom:15px; line-height:24px; padding-bottom:15px;}
 .event-dtail img{.width:98%; max-width:98%; margin:5px 0;}
 .event-box{padding:1px;   font-size:14px; border:1px solid #ccc;   background:#fff;  }
 .event-box div{margin-bottom:1px;}
-.event-box .box-title{padding:8px;  color:#fff; background:#116362;}
+.event-box .box-title{padding:7px;  color:#fff; background:#116362;}
 .event-box .event-title{padding:4px 8px; background:#5ca1a0; color:#16403f;}
 .event-box .event-title a{color:#16403F; text-decoration:none; display:block; cursor:pointer;}
 .event-box .event-title a:link{color:#16403F; text-decoration:none;}
@@ -406,9 +402,6 @@ p{padding-bottom:15px; line-height:24px; padding-bottom:15px;}
 .slides ul li{ float:left; display:inline; width:940px; height:359px; position:relative; overflow:hidden; }
 
 .slide-info { float:left; width:940px; }
-
-
-
 
 
 #slider-navigation { height:60px; width:940px;  position:absolute; top:0px; left:-4px; background:url(../images/slider-nav.gif) no-repeat; }
@@ -554,3 +547,4 @@ h5 a:active{color:#000; text-decoration:none;}
 .sa-raw{margin-bottom:10px;}
 .contest-form{position:relative;}
 .contest-form button{outline:none;}
+.search-height{height:119px;}
