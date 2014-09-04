@@ -358,17 +358,19 @@ function get_event_date(start_date, start_time, end_date, end_time) {
 //}
 
 /*-- icon code start --*/
-function get_event_icon(div_to_append, group_id, group_name, order_by_value, number) {
-  $.ajax({
-    url: PARISH_URL + "/get_group_forms.json/" + group_id,
-    cache: false,
-    type: 'get',
-    dataType: 'jsonp',
-    success: function(response) {
-      show_icon(response, div_to_append, group_id, group_name, order_by_value, number);
-    }
-  });
-}
+function get_event_icon(){} 
+//This function is commented because client not need header event icon form SY
+// function get_event_icon(div_to_append, group_id, group_name, order_by_value, number) {
+//   $.ajax({
+//     url: PARISH_URL + "/get_group_forms.json/" + group_id,
+//     cache: false,
+//     type: 'get',
+//     dataType: 'jsonp',
+//     success: function(response) {
+//       show_icon(response, div_to_append, group_id, group_name, order_by_value, number);
+//     }
+//   });
+// }
 
 function show_icon(response, div_to_append, group_id, group_name, order_by_value, number) {
   $(div_to_append).append('<div id="event-icon"></div>');
