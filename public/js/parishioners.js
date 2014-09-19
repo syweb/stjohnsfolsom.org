@@ -3,13 +3,11 @@ var PARISH_URL = 'https://stjohnfolsom.beehively.com';
 //var PARISH_URL = 'http://stjohnfolsom.local-sy.com:4001';
 //var PARISH_URL = 'https://ghanshyam.schoolyardapp.com';
 
-
 function for_accordian(accordian_no){
-
 	accordian_no = '.'+accordian_no + ' ';
 
 	//Accordian Start
-	$(accordian_no + '.event-dtail').css({ display:"none"});
+	$(accordian_no + '.event-dtail').css({ display:"none"}); 
 	//$(accordian_no + '.event-dtail:first').css({ display:"block"});
 	//$(accordian_no + '.event-title:first').addClass('ui-state-active');
 
@@ -319,7 +317,7 @@ function get_group_forms(div_to_append, group_id, group_name, number) {
 
 function show_form(response, div_to_append, group_id, group_name, number) {
     
-  $(div_to_append).append('<div id="accordion" class="cls-events"><div class="box-title">&nbsp;&nbsp;&nbsp;<em>' + group_name + '</em></div><ul id="events" ></ul>');
+  $(div_to_append).append('<div id="accordion" class="cls-events"><div class="box-title event-title">&nbsp;&nbsp;&nbsp;<em>' + group_name + '</em></div><ul id="events" class="event-dtail"></ul>');
 
   $.each(response.reverse(), function(i, item) {
     response[i] = response[i].form;
@@ -335,6 +333,7 @@ function show_form(response, div_to_append, group_id, group_name, number) {
   });
 
   $(div_to_append).append('</div>');
+  for_accordian('accordian_2');
 }
 
 
