@@ -317,7 +317,7 @@ function get_group_forms(div_to_append, group_id, group_name, number) {
 
 function show_form(response, div_to_append, group_id, group_name, number) {
     
-  $(div_to_append).append('<div id="accordion" class="cls-events"><div class="box-title event-title">&nbsp;&nbsp;&nbsp;<em>' + group_name + '</em></div><ul id="events" class="event-dtail"></ul>');
+  $(div_to_append).append('<div id="accordion" class="cls-events"><div class="box-title event-title">&nbsp;&nbsp;&nbsp;<em>' + group_name + '&nbsp;<span class="fileno">(' +response.length+ ')<span>' + '</em></div><ul id="events" class="event-dtail"></ul>');
 
   $.each(response.reverse(), function(i, item) {
     response[i] = response[i].form;
@@ -328,7 +328,7 @@ function show_form(response, div_to_append, group_id, group_name, number) {
     download_link = PARISH_URL + '/publik_file_download/' + response[i].id;
 
 
-    $(div_to_append).find('#events').append('<li><div><div class="event-title"><a href="' + download_link + '">' + response[i].title + '</a></div><div class="sptr1"></div></div>'
+    $(div_to_append).find('#events').append('<li><div class="filelink"><a href="' + download_link + '">' + response[i].title + '</a></div>'
     + '</li>');
   });
 
