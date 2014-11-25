@@ -9,4 +9,5 @@ set :revision,    "origin/master"
 desc "this is for production"
 task :production do
   set :deploy_to,   "/home/sites/#{application}"
+  set :keep_releases, 3
 end
