@@ -1,5 +1,6 @@
 
 //ministries quick view
+/*
 $(function(){
 	$.get('/m-menu.html', function(data) {
 		$('.top-menu > .container').append(data);
@@ -17,4 +18,10 @@ $(function(){
 			})
 		})
 	});
+})
+*/
+
+$(function(){
+    var ministrypath = $('.link5 > a').attr('href').replace('#', '/ministries.html');
+     $('.link5 > a').attr('href', ministrypath);
 })
